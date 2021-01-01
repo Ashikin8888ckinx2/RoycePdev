@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.landing-backdrop {
+  @include flex-center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  background-image: url('../images/barbershopbackdrop2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  @include flex-center;
+  width: 90%;
+  height: 4rem;
+  justify-content: space-between;
+  background-color: white;
+  margin-top: 2rem;
+  padding: 0rem 3rem;
+}
+
+nav {
+  ul {
+    display: flex;
+    background-color: yellow;
+
+    li {
+      list-style-type: none;
+      margin: 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
+
+.landing-info-container {
+  width: 90%;
+  height: 30rem;
+  margin-top: 2rem;
+  background-color: red;
+}
