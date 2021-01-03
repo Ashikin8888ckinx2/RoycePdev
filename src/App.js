@@ -1,28 +1,59 @@
-import "./stylesheets/landing-style.css"
-
+import React from 'react'
+import { Services } from './components/Services'
+import { Staff } from './components/Staff'
+import { Home } from './components/Home'
+import { Contact } from './components/Contact'
+import { Reservations } from './components/Reservations'
+import './stylesheets/landing-style.css'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="landing-backdrop">
-      <header>
-        <div className="logo">FadeHouse</div>
-        <nav>
-          <ul>
-            <li>Services</li>
-            <li>Staff</li>
-            <li>Contact</li>
-            <li>Reservations</li>
-          </ul>
-        </nav>
-      </header>
-      <div className="landing-info-container">
-        <h1>THIS IS MY HEADER</h1>
-        <p>
-        Tempor nulla eiusmod in sit. Pariatur fugiat eiusmod cillum sit. Ut ipsum minim adipisicing minim minim incididunt et elit deserunt consectetur ad voluptate ullamco. Elit laboris quis aute occaecat id consequat ut aliqua nulla dolor. Ipsum duis aliqua excepteur magna eu veniam aliqua do reprehenderit do sit irure occaecat sint. Enim veniam irure sunt Lorem laborum nulla laboris laborum. Aliquip ex eiusmod occaecat nisi voluptate eu in.
-        </p>
-      </div>
+    <div className='landing-backdrop'>
+      <Router>
+        <header>
+          <div className='logo'>
+            <Link to='/'>FadeHouse</Link>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <Link to='/Services'>Services</Link>
+              </li>
+              <li>
+                <Link to='/staff'>Staff</Link>
+              </li>
+              <li>
+                <Link to='/reservations'>Reservations</Link>
+              </li>
+              <li>
+                <Link to='/contact'>Contact</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div className='landing-info-container'>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/Services'>
+              <Services />
+            </Route>
+            <Route path='/reservations'>
+              <Reservations />
+            </Route>
+            <Route path='/contact'>
+              <Contact />
+            </Route>
+            <Route path='/staff'>
+              <Staff />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
