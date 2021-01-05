@@ -39,6 +39,8 @@ export const Services = () => {
 
   return (
     <div className='services-container'>
+      <h1>Services</h1>
+      <div className="service-card-container">
       {services.map((service) => (
         <Service
           key={service.name}
@@ -47,6 +49,7 @@ export const Services = () => {
           description={service.description}
         />
       ))}
+      </div>
     </div>
   )
 }
