@@ -15,15 +15,13 @@
   margin: 1rem;
   background: white;
   border-radius: 10px;
-
-  img {
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    background: green;
-  }
-  h2 {
-    margin-top: 1rem;
-  }
 }
-
+.staff-card img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background: green;
+}
+.staff-card h2 {
+  margin-top: 1rem;
+}/*# sourceMappingURL=staff.css.map */
