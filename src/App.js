@@ -3,7 +3,7 @@ import { Services } from './components/Services'
 import { Staff } from './components/Staff'
 import { Home } from './components/Home'
 import { Contact } from './components/Contact'
-import { Reservations } from './components/Reservations'
+import { Reservations } from './components/reservations/Reservations'
 import './stylesheets/landing-style.css'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
