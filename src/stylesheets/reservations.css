@@ -1,4 +1,20 @@
 .calendar {
   color: blue;
   width: 25rem;
-}/*# sourceMappingURL=reservations.css.map */
+}
+
+.time-button-container {
+  width: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.time-button {
+  background-color: gray;
+  color: yellow;
+  padding: .5rem;
+}
+/*# sourceMappingURL=reservations.css.map */

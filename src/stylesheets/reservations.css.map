@@ -1,1 +1,9 @@
-{"version":3,"sources":["reservations.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EAEA,YAAA;AAAF","file":"reservations.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,KAAK,EAAE,IAAI;EAEX,KAAK,EAAE,KAAK;CACb;;AAED,AAAA,sBAAsB,CAAC;EACrB,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;CAChB;;AAED,AAAA,YAAY,CAAA;EACV,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,KAAK;EACvB,KAAK,EAAE,MAAM;CACd",
+    "sources": [
+        "reservations.scss"
+    ],
+    "names": [],
+    "file": "reservations.css"
+}

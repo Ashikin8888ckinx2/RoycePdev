@@ -1,11 +1,18 @@
 .staff-section-container {
   height: 100%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: pink;
 }
@@ -17,10 +24,19 @@
 }
 
 .staff-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 13rem;
   width: 13rem;
   cursor: pointer;
@@ -28,12 +44,15 @@
   background: white;
   border-radius: 10px;
 }
+
 .staff-card img {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
   background: green;
 }
+
 .staff-card h2 {
   margin-top: 1rem;
-}/*# sourceMappingURL=staff.css.map */
+}
+/*# sourceMappingURL=staff.css.map */
