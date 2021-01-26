@@ -3,8 +3,7 @@ import Calendar from 'react-calendar'
 import '../../stylesheets/reservations.css'
 
 export const ResPageOne = () => {
-  const [date, setDate] = useState(new Date())
-  const [apptTime, setApptTime] = useState()
+
 
   const weekday = new Array(7)
   weekday[0] = 'Sunday'
@@ -52,6 +51,11 @@ export const ResPageOne = () => {
     '6:30pm',
   ]
 
+  const [date, setDate] = useState(new Date())
+  const [apptTime, setApptTime] = useState()
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+
   const selectedDay = weekday[String(date.getDay())]
   const selectedMonth = month[String(date.getMonth())]
   const selectedDate = date.getDate()
@@ -62,6 +66,12 @@ export const ResPageOne = () => {
 
   return (
     <div>
+
+
+
+
+
+
       <Calendar
         className='calendar'
         onChange={onChange}
@@ -71,7 +81,7 @@ export const ResPageOne = () => {
         showNeighboringMonth={false}
         minDate={new Date()}
       />
-      <div> {selectedDay + ' ' + selectedMonth + ' ' + selectedDate} </div>
+      <div> {selectedDay +"," + ' ' + selectedMonth + ' ' + selectedDate} </div>
 
       {times.map((time) => (
         <button
@@ -85,10 +95,12 @@ export const ResPageOne = () => {
       <div className='time-button-container'></div>
       <div>{apptTime}</div>
       <div>Name</div>
-      <input type="text"></input>
-      <div>Email</div>
-      <input type="email"></input>
+      <input onChange={e => setName(e.target.value) } type="text"></input>
+       <div>{name}</div>
 
+      <div>Email</div>
+      <input type="email" onChange={e => setEmail(e.target.value)}></input>
+        <div>{email}</div>
     </div>
   )
 }
