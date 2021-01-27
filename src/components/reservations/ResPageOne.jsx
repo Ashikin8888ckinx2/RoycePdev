@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import Calendar from 'react-calendar'
+import { servicesArray } from '../services/servicesArray'
 import '../../stylesheets/reservations.css'
 
 export const ResPageOne = () => {
-
-
   const weekday = new Array(7)
   weekday[0] = 'Sunday'
   weekday[1] = 'Monday'
@@ -55,6 +54,7 @@ export const ResPageOne = () => {
   const [apptTime, setApptTime] = useState()
   const [name, setName] = useState()
   const [email, setEmail] = useState()
+  const [service, setService] = useState()
 
   const selectedDay = weekday[String(date.getDay())]
   const selectedMonth = month[String(date.getMonth())]
@@ -66,11 +66,13 @@ export const ResPageOne = () => {
 
   return (
     <div>
+      <h2>Choose Your Service </h2>
+      {servicesArray.map((e) => (
+        <div onClick={() => setService(e.name)}  className='reservation-service'>{e.name}</div>
+      ))}
+      <div>{service}</div>
 
-
-
-
-
+      <h2>Choose Your Barber</h2>
 
       <Calendar
         className='calendar'
@@ -81,7 +83,10 @@ export const ResPageOne = () => {
         showNeighboringMonth={false}
         minDate={new Date()}
       />
-      <div> {selectedDay +"," + ' ' + selectedMonth + ' ' + selectedDate} </div>
+      <div>
+        {' '}
+        {selectedDay + ',' + ' ' + selectedMonth + ' ' + selectedDate}{' '}
+      </div>
 
       {times.map((time) => (
         <button
@@ -95,12 +100,12 @@ export const ResPageOne = () => {
       <div className='time-button-container'></div>
       <div>{apptTime}</div>
       <div>Name</div>
-      <input onChange={e => setName(e.target.value) } type="text"></input>
-       <div>{name}</div>
+      <input onChange={(e) => setName(e.target.value)} type='text'></input>
+      <div>{name}</div>
 
       <div>Email</div>
-      <input type="email" onChange={e => setEmail(e.target.value)}></input>
-        <div>{email}</div>
+      <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
+      <div>{email}</div>
     </div>
   )
 }

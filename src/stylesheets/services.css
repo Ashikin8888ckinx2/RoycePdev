@@ -63,4 +63,14 @@
   text-align: center;
   margin-top: 1rem;
 }
+
+.reservation-service {
+  background-color: #666;
+  border: 3px solid pink;
+  cursor: pointer;
+}
+
+.reservation-service:active {
+  border: 3px solid yellow;
+}
 /*# sourceMappingURL=services.css.map */
