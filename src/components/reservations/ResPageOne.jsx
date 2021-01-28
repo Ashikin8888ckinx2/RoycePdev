@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Calendar from 'react-calendar'
 import { servicesArray } from '../services/servicesArray'
+import { staffArray } from '../staffArray'
 import '../../stylesheets/reservations.css'
 
 export const ResPageOne = () => {
@@ -55,6 +56,7 @@ export const ResPageOne = () => {
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [service, setService] = useState()
+  const [barber, setBarber] = useState()
 
   const selectedDay = weekday[String(date.getDay())]
   const selectedMonth = month[String(date.getMonth())]
@@ -68,11 +70,27 @@ export const ResPageOne = () => {
     <div>
       <h2>Choose Your Service </h2>
       {servicesArray.map((e) => (
-        <div onClick={() => setService(e.name)}  className='reservation-service'>{e.name}</div>
+        <div onClick={() => setService(e.name)} className='reservation-service'>
+          {e.name}
+        </div>
       ))}
       <div>{service}</div>
 
       <h2>Choose Your Barber</h2>
+      <div className="barber-card-container">
+        {staffArray.map((member) => (
+          <div
+            onClick={() => setBarber(member.name)}
+            className='reservation-staff-container'
+          >
+            <div>{member.name}</div>
+            <img className='reservation-picture' src={member.picture}></img>
+            <div>Schedule</div>
+            <div>{member.schedule}</div>
+          </div>
+        ))}
+      </div>
+      <div>{barber}</div>
 
       <Calendar
         className='calendar'
