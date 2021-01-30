@@ -1,7 +1,12 @@
 import { useState, useRef, useEffect } from 'react'
-import Calendar from 'react-calendar'
+import 'react-modern-calendar-datepicker/lib/DatePicker.css';
+import { DatePicker, Calendar} from 'react-modern-calendar-datepicker';
 import { servicesArray } from '../services/servicesArray'
 import { staffArray } from '../staffArray'
+import { disabledDaysChris } from "../employeeschedule/disabledDaysChris"
+import { disabledDaysJason } from "../employeeschedule/disabledDaysJason"
+import { disabledDaysRachel } from "../employeeschedule/disabledDaysRachel"
+import { disabledDaysRodolfo } from "../employeeschedule/disabledDaysRodolfo"
 import '../../stylesheets/reservations.css'
 
 export const ResPageOne = () => {
@@ -28,9 +33,9 @@ export const ResPageOne = () => {
   month[10] = 'November'
   month[11] = 'December'
 
+
+
   const times = [
-    '9:00am',
-    '9:30am',
     '10:00am',
     '10:30am',
     '11:00am',
@@ -50,21 +55,30 @@ export const ResPageOne = () => {
     '6:00pm',
     '6:30pm',
   ]
+  const maximumDate = {
+    year: 2021,
+    month: 12,
+    day: 31,
+  }
 
   const [date, setDate] = useState(new Date())
+  const [selectedDay, setSelectedDay] = useState(null);
   const [apptTime, setApptTime] = useState()
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [service, setService] = useState()
   const [barber, setBarber] = useState()
 
-  const selectedDay = weekday[String(date.getDay())]
-  const selectedMonth = month[String(date.getMonth())]
-  const selectedDate = date.getDate()
+  // const selectedDay = weekday[String(date.getDay())]
+  // const selectedMonth = month[String(date.getMonth())]
+  // const selectedDate = date.getDate()
 
   function onChange(selectedValue) {
     setDate(selectedValue)
   }
+
+
+  console.log(new Date())
 
   return (
     <div>
@@ -77,7 +91,7 @@ export const ResPageOne = () => {
       <div>{service}</div>
 
       <h2>Choose Your Barber</h2>
-      <div className="barber-card-container">
+      <div className='barber-card-container'>
         {staffArray.map((member) => (
           <div
             onClick={() => setBarber(member.name)}
@@ -91,20 +105,15 @@ export const ResPageOne = () => {
         ))}
       </div>
       <div>{barber}</div>
-
       <Calendar
-        className='calendar'
-        onChange={onChange}
-        value={date}
-        next2Label={null}
-        prev2Label={null}
-        showNeighboringMonth={false}
-        minDate={new Date()}
-      />
-      <div>
-        {' '}
-        {selectedDay + ',' + ' ' + selectedMonth + ' ' + selectedDate}{' '}
-      </div>
+      value={selectedDay}
+      onChange={setSelectedDay}
+      disabledDays={disabledDaysRodolfo}
+      maximumDate={maximumDate}
+      inputPlaceholder="Select a day"
+      onClick={console.log(selectedDay)}
+    />
+          <br />
 
       {times.map((time) => (
         <button
