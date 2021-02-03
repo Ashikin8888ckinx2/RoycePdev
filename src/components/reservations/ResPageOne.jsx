@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from 'react'
-import 'react-modern-calendar-datepicker/lib/DatePicker.css';
-import { DatePicker, Calendar} from 'react-modern-calendar-datepicker';
+import 'react-modern-calendar-datepicker/lib/DatePicker.css'
+import { DatePicker, Calendar } from 'react-modern-calendar-datepicker'
 import { servicesArray } from '../services/servicesArray'
 import { staffArray } from '../staffArray'
-import { disabledDaysChris } from "../employeeschedule/disabledDaysChris"
-import { disabledDaysJason } from "../employeeschedule/disabledDaysJason"
-import { disabledDaysRachel } from "../employeeschedule/disabledDaysRachel"
-import { disabledDaysRodolfo } from "../employeeschedule/disabledDaysRodolfo"
+import { disabledDaysChris } from '../employeeschedule/disabledDaysChris'
+import { disabledDaysJason } from '../employeeschedule/disabledDaysJason'
+import { disabledDaysRachel } from '../employeeschedule/disabledDaysRachel'
+import { disabledDaysRodolfo } from '../employeeschedule/disabledDaysRodolfo'
 import '../../stylesheets/reservations.css'
 
 export const ResPageOne = () => {
@@ -19,19 +19,19 @@ export const ResPageOne = () => {
   weekday[5] = 'Friday'
   weekday[6] = 'Saturday'
 
-  const month = new Array()
-  month[0] = 'January'
-  month[1] = 'February'
-  month[2] = 'March'
-  month[3] = 'April'
-  month[4] = 'May'
-  month[5] = 'June'
-  month[6] = 'July'
-  month[7] = 'August'
-  month[8] = 'September'
-  month[9] = 'October'
-  month[10] = 'November'
-  month[11] = 'December'
+  const months = new Array()
+  months[1] = 'January'
+  months[2] = 'February'
+  months[3] = 'March'
+  months[4] = 'April'
+  months[5] = 'May'
+  months[6] = 'June'
+  months[7] = 'July'
+  months[8] = 'August'
+  months[9] = 'September'
+  months[10] = 'October'
+  months[11] = 'November'
+  months[12] = 'December'
 
 
 
@@ -61,30 +61,40 @@ export const ResPageOne = () => {
     day: 31,
   }
 
+
+  const d = new Date()
+  const defaultValue = {
+    year: 2021,
+    month: 11,
+    day: d.getDate(),
+  };
+  
   const [date, setDate] = useState(new Date())
-  const [selectedDay, setSelectedDay] = useState(null);
+  const [selectedDay, setSelectedDay] = useState(defaultValue)
   const [apptTime, setApptTime] = useState()
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [service, setService] = useState()
   const [barber, setBarber] = useState()
+   
+
 
   // const selectedDay = weekday[String(date.getDay())]
-  // const selectedMonth = month[String(date.getMonth())]
+   const selectedMonth = months[selectedDay.month]
   // const selectedDate = date.getDate()
 
   function onChange(selectedValue) {
     setDate(selectedValue)
   }
-
-
-  console.log(new Date())
-
   return (
     <div>
       <h2>Choose Your Service </h2>
       {servicesArray.map((e) => (
-        <div onClick={() => setService(e.name)} className='reservation-service'>
+        <div
+          key={e.name}
+          onClick={() => setService(e.name)}
+          className='reservation-service'
+        >
           {e.name}
         </div>
       ))}
@@ -94,6 +104,7 @@ export const ResPageOne = () => {
       <div className='barber-card-container'>
         {staffArray.map((member) => (
           <div
+            key={member.name}
             onClick={() => setBarber(member.name)}
             className='reservation-staff-container'
           >
@@ -106,15 +117,26 @@ export const ResPageOne = () => {
       </div>
       <div>{barber}</div>
       <Calendar
-      value={selectedDay}
-      onChange={setSelectedDay}
-      disabledDays={disabledDaysRodolfo}
-      maximumDate={maximumDate}
-      inputPlaceholder="Select a day"
-      onClick={console.log(selectedDay)}
-    />
-          <br />
-
+        value={selectedDay}
+        onChange={setSelectedDay}
+        onClick={console.log(selectedDay)}
+        disabledDays={
+          barber === 'Rachel'
+            ? disabledDaysRachel
+            : barber === 'Chris'
+            ? disabledDaysChris
+            : barber === 'Rodolfo'
+            ? disabledDaysRodolfo
+            : barber === 'Jason'
+            ? disabledDaysJason
+            : disabledDaysRachel
+        }
+        maximumDate={maximumDate}
+        inputPlaceholder='Select a day'
+      />
+      
+      <br />
+      <div> {selectedMonth + " " + selectedDay.day} </div>
       {times.map((time) => (
         <button
           key={time}
