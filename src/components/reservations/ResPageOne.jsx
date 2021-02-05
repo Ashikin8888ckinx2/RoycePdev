@@ -77,7 +77,8 @@ export const ResPageOne = () => {
   const [service, setService] = useState()
   const [barber, setBarber] = useState()
    
-
+  const e = new Date()
+  console.log(selectedDay)
 
   // const selectedDay = weekday[String(date.getDay())]
    const selectedMonth = months[selectedDay.month]
@@ -119,7 +120,6 @@ export const ResPageOne = () => {
       <Calendar
         value={selectedDay}
         onChange={setSelectedDay}
-        onClick={console.log(selectedDay)}
         disabledDays={
           barber === 'Rachel'
             ? disabledDaysRachel
