@@ -12,22 +12,22 @@ function App() {
     <div className='landing-backdrop'>
       <Router>
         <header>
-          <div className='logo'>
-            <Link to='/'>FadeHouse</Link>
+          <div className='logo-container'>
+            <Link className="logo" to='/'>SDFadeShack</Link>
           </div>
           <nav>
             <ul>
               <li>
-                <Link to='/Services'>Services</Link>
+                <Link className="nav-link" to='/Services'>Services</Link>
               </li>
               <li>
-                <Link to='/staff'>Staff</Link>
+                <Link className="nav-link" to='/staff'>Staff</Link>
               </li>
               <li>
-                <Link to='/reservations'>Reservations</Link>
+                <Link className="nav-link" to='/reservations'>Reservations</Link>
               </li>
               <li>
-                <Link to='/contact'>Contact</Link>
+                <Link className="nav-link" to='/contact'>Contact</Link>
               </li>
             </ul>
           </nav>

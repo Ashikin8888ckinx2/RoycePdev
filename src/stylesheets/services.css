@@ -1,51 +1,27 @@
 .services-container {
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   flex-: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .services-container h1 {
   margin-bottom: 3rem;
 }
 
 .service-card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .service-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: 13rem;
   width: 13rem;
   background: white;
@@ -53,24 +29,19 @@
   padding: 1rem;
   border-radius: 10px;
 }
-
 .service-card h2 {
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
 .service-card p {
   text-align: center;
   margin-top: 1rem;
 }
 
 .reservation-service {
-  background-color: #666;
-  border: 3px solid pink;
   cursor: pointer;
 }
 
 .reservation-service:active {
   border: 3px solid yellow;
-}
-/*# sourceMappingURL=services.css.map */
+}/*# sourceMappingURL=services.css.map */

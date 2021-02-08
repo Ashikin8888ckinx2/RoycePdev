@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
+import keys from "../components/keys"
+
+
+
 
 const AnyReactComponent = (text) => <div>{text}</div>;
 
@@ -11,7 +15,7 @@ const Map = () => {
     return (
         <div style={{ height: '20rem', width: '20rem' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyD367936iWZJR40h3yfetzmJZ-Mv8hQcgk' }}
+          bootstrapURLKeys={{ key: `${keys.GOOGLE_KEY}` }}
           defaultCenter={center}
           defaultZoom={zoom}
         >

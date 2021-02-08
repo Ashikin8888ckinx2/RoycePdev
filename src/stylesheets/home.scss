@@ -1,0 +1,25 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+
+  section {
+    width: 45%;
+
+    h1 {
+      font-size: 4rem;
+      margin-top: -0.8rem;
+    }
+    p {
+      margin: 1rem 0rem;
+    }
+    button {
+      margin-top: 3rem;
+    }
+    li {
+      list-style-type: none;
+      margin: 1rem 0rem;
+    }
+  }
+}

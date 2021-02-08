@@ -7,11 +7,9 @@
 
 .card-container {
   display: flex;
-  background: pink;
 }
 
 .bio-container {
-  background: white;
   padding: 1rem;
   text-align: center;
 }
@@ -25,7 +23,7 @@
   width: 13rem;
   cursor: pointer;
   margin: 1rem;
-  background: white;
+  background: #666;
   border-radius: 10px;
 
   img {
