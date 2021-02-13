@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
-const keys = require("../components/keys")
+import keys from "../components/keys"
 
 
 

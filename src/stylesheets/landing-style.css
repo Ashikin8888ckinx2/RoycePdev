@@ -1,58 +1,41 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: bold;
 }
 
 .landing-backdrop {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-image: url("../images/barbershopbackdrop2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  flex-direction: column;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 90%;
   height: 4rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background-color: white;
   margin-top: 2rem;
   padding: 0rem 3rem;
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background-color: yellow;
 }
-
 nav ul li {
   list-style-type: none;
   margin: 0.5rem;
   cursor: pointer;
   font-weight: bold;
+}
+
+.nav-link {
+  text-decoration: none;
 }
 
 .landing-info-container {
@@ -61,4 +44,8 @@ nav ul li {
   background-color: white;
   padding: 5rem 3rem;
 }
-/*# sourceMappingURL=landing-style.css.map */
+
+.logo {
+  text-decoration: none;
+  font-size: 2rem;
+}/*# sourceMappingURL=landing-style.css.map */

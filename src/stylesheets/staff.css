@@ -1,58 +1,37 @@
 .staff-section-container {
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background: pink;
 }
 
 .bio-container {
-  background: white;
   padding: 1rem;
   text-align: center;
 }
 
 .staff-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 13rem;
   width: 13rem;
   cursor: pointer;
   margin: 1rem;
-  background: white;
+  background: #666;
   border-radius: 10px;
 }
-
 .staff-card img {
   height: 6rem;
   width: 6rem;
   border-radius: 50%;
   background: #666;
 }
-
 .staff-card h2 {
   margin-top: 1rem;
-}
-/*# sourceMappingURL=staff.css.map */
+}/*# sourceMappingURL=staff.css.map */
