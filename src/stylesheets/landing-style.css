@@ -19,7 +19,6 @@ header {
   width: 90%;
   height: 4rem;
   justify-content: space-between;
-  background-color: white;
   margin-top: 2rem;
   padding: 0rem 3rem;
 }
@@ -40,8 +39,7 @@ nav ul li {
 
 .landing-info-container {
   width: 90%;
-  margin-top: 2rem;
-  background-color: white;
+  height: 100%;
   padding: 5rem 3rem;
 }
 

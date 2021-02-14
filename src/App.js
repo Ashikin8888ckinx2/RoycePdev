@@ -13,7 +13,7 @@ function App() {
       <Router>
         <header>
           <div className='logo-container'>
-            <Link className="logo" to='/'>FadeShack</Link>
+            <Link className="logo" to='/'>SDFadeShack</Link>
           </div>
           <nav>
             <ul>

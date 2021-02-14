@@ -1,9 +1,32 @@
 import React from 'react'
+import { CtaButton } from './CtaButton'
+import '../stylesheets/home.css'
 
 export const Home = () => {
   return (
-    <div>
-      <h1>Hofddfgme</h1>
+    <div className='home-container'>
+      <section>
+        <h1>Home of the best fades in San Diego.</h1>
+      </section>
+      <section>
+        <h2>Get a fresh cut today so you will be ready for any occasion</h2>
+        <p>
+          With an awesome haircut from SD Fade Shack you will be excited to show
+          off your new look. Keep up with the latest and greatest hairstyles and
+          schedule your next haircut today.{' '}
+        </p>
+        <p>
+          Walkins welcome, but if you want a specific time or barber, use our
+          online reservation system or book over the phone. We are the perfect
+          place for group cuts as well if your crew wants to look fly for:
+        </p>
+        <ul>
+          <li>Weddings</li>
+          <li>Events</li>
+          <li>Bachelor Parties</li>
+        </ul>
+        <CtaButton />
+      </section>
     </div>
   )
 }
