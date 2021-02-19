@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 @mixin flex-center {
@@ -12,14 +16,17 @@
 
 .landing-backdrop {
   @include flex-center;
+  position: relative;
   height: 100vh;
   width: 100vw;
   flex-direction: column;
+  background-color: hsl(46, 56%, 89%);
+  z-index: 3
 }
 
 header {
   @include flex-center;
-  width: 90%;
+  width: 80%;
   height: 4rem;
   justify-content: space-between;
   margin-top: 2rem;
@@ -27,30 +34,78 @@ header {
 }
 
 nav {
-  
   ul {
     display: flex;
 
     li {
+      position: relative;
+      font-family: 'Montserrat', sans-serif;
       list-style-type: none;
-      margin: 0.5rem;
+      padding: 0.5rem;
       cursor: pointer;
-      font-weight: bold;
+
+      a {
+        text-decoration: none;
+        font-weight: 600;
+        color: black;
+      }
+      a:hover {
+        color: rgb(255, 113, 53);
+      }
+      a:hover::after {
+        position: absolute;
+        border-radius: 20px;
+        display: block;
+        margin-top: 0.5rem;
+        content: '';
+        width: 100%;
+        height: 5px;
+        background: rgb(255, 113, 53);
+        left: 1px;
+      }
     }
   }
 }
 
-.nav-link {
-  text-decoration: none;
+.active-nav {
+  color: rgb(255, 113, 53);
+}
+ .active-nav:after {
+   position: absolute;
+   border-radius: 20px;
+   display: block;
+   margin-top: 0.5rem;
+   content: '';
+   width: 100%;
+   height: 5px;
+   background: rgb(255, 113, 53);
+   left: 1px;
 }
 
+// .nav-link:hover:after {
+
+// }
+
 .landing-info-container {
-  width: 90%;
+  width: 80%;
   height: 100%;
   padding: 5rem 3rem;
 }
 
 .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: rgb(255, 113, 53);
   text-decoration: none;
   font-size: 2rem;
+}
+
+.watermark {
+  position: fixed;
+  font-weight: 800;
+  font-size: 18vw;
+  bottom: 0;
+  left: -5rem;
+  z-index: -5;
+   color: hsl(46, 56%, 80%);
 }

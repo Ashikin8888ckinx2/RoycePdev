@@ -9,10 +9,15 @@
 
     h1 {
       font-size: 4rem;
+      font-weight: 800;
       margin-top: -0.8rem;
     }
+    h2 {
+      font-weight: 800;
+    }
     p {
-      margin: 1rem 0rem;
+      margin: 2rem 0rem;
+      line-height: 1.5rem;
     }
     button {
       margin-top: 3rem;
@@ -22,4 +27,10 @@
       margin: 1rem 0rem;
     }
   }
+}
+
+.landing-icon {
+  height: 5rem;
+  width: 5rem;
+  margin-top: 3rem;
 }

@@ -5,7 +5,7 @@ import { Home } from './components/Home'
 import { Contact } from './components/Contact'
 import { Reservations } from './components/reservations/Reservations'
 import './stylesheets/landing-style.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, NavLink, Link } from 'react-router-dom'
 
 function App() {
   return (
@@ -13,21 +13,24 @@ function App() {
       <Router>
         <header>
           <div className='logo-container'>
-            <Link className="logo" to='/'>SDFadeShack</Link>
+            <NavLink className="logo" to='/'>SDFadeShack</NavLink>
           </div>
           <nav>
             <ul>
               <li>
-                <Link className="nav-link" to='/Services'>Services</Link>
+                <NavLink activeClassName="active-nav" className="nav-link" exact to='/'>Home</NavLink>
               </li>
               <li>
-                <Link className="nav-link" to='/staff'>Staff</Link>
+                <NavLink activeClassName="active-nav" className="nav-link" exact to='/Services'>Services</NavLink>
               </li>
               <li>
-                <Link className="nav-link" to='/reservations'>Reservations</Link>
+                <NavLink activeClassName="active-nav" className="nav-link" exact to='/staff'>Staff</NavLink>
               </li>
               <li>
-                <Link className="nav-link" to='/contact'>Contact</Link>
+                <NavLink activeClassName="active-nav" className="nav-link" exact to='/reservations'>Reservations</NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName="active-nav" className="nav-link" to='/contact'>Contact</NavLink>
               </li>
             </ul>
           </nav>
@@ -52,6 +55,7 @@ function App() {
           </Switch>
         </div>
       </Router>
+      <div className="watermark">SDFadeShack</div>
     </div>
   )
 }

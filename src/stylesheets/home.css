@@ -9,10 +9,15 @@
 }
 .home-container section h1 {
   font-size: 4rem;
+  font-weight: 800;
   margin-top: -0.8rem;
 }
+.home-container section h2 {
+  font-weight: 800;
+}
 .home-container section p {
-  margin: 1rem 0rem;
+  margin: 2rem 0rem;
+  line-height: 1.5rem;
 }
 .home-container section button {
   margin-top: 3rem;
@@ -20,4 +25,10 @@
 .home-container section li {
   list-style-type: none;
   margin: 1rem 0rem;
+}
+
+.landing-icon {
+  height: 5rem;
+  width: 5rem;
+  margin-top: 3rem;
 }/*# sourceMappingURL=home.css.map */
