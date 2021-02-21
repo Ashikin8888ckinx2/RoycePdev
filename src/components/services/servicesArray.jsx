@@ -19,7 +19,7 @@
   },
   {
     name: 'Hot Towel Shave',
-    price: '45',
+    price: '$45',
     description:
       '3 Hot Towels and 1 Cold Towel Process. All shaves are performed just like the way they did back in the day!',
   },

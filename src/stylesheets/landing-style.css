@@ -12,7 +12,6 @@
   display: flex;
   align-items: center;
   position: relative;
-  height: 100vh;
   width: 100vw;
   flex-direction: column;
   background-color: #f3ebd3;

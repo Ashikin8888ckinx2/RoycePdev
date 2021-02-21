@@ -2,6 +2,7 @@ import React from 'react'
 import { Service } from './Service'
 import '../../stylesheets/services.css'
 import { servicesArray } from "./servicesArray"
+import { CtaButton } from "../../components/CtaButton"
 
 export const Services = () => {
   
@@ -17,6 +18,7 @@ export const Services = () => {
         />
       ))}
       </div>
+      <CtaButton className="service-cta" />
     </div>
   )
 }
