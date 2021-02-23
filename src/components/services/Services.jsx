@@ -6,15 +6,16 @@ import { CtaButton } from "../../components/CtaButton"
 
 export const Services = () => {
   
+
   return (
     <div className='services-container'>
       <div className="service-card-container">
-      {servicesArray.map((service) => (
+      {servicesArray.map((e) => (
         <Service
-          key={service.name}
-          name={service.name}
-          price={service.price}
-          description={service.description}
+          key={e.name}
+          name={e.name}
+          price={e.price}
+          description={e.description}
         />
       ))}
       </div>

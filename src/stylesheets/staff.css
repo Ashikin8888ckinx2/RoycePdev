@@ -23,14 +23,16 @@
   width: 13rem;
   cursor: pointer;
   margin: 1rem;
-  background: #666;
   border-radius: 10px;
+  color: black;
 }
 .staff-card img {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  background: #666;
+  height: 9rem;
+  width: 9rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+  background: green;
 }
 .staff-card h2 {
   margin-top: 1rem;

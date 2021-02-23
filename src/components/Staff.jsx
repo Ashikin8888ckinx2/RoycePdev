@@ -4,7 +4,8 @@ import '../stylesheets/staff.css'
 
 export const Staff = () => {
 
-  const [ aboutMe, setAboutMe ] = useState('Click on the staff member to find out more about them')
+  
+  const [ aboutMe, setAboutMe ] = useState(staffArray[0].about)
 
   return (
     <div className='staff-section-container'>
@@ -20,7 +21,7 @@ export const Staff = () => {
           </div>
         ))}
       </div>
-      <div className='bio-container'>{aboutMe}</div>
+      <div className='bio-container'><p className='bio-paragraph'>{aboutMe}</p></div>
     </div>
   )
 }

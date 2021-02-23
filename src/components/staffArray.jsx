@@ -1,7 +1,7 @@
-import chris from '../pictures/chris.png'
-import jason from '../pictures/jason.png'
-import rachel from '../pictures/rachel.png'
-import rodolfo from '../pictures/rodolfo.png'
+import chris from '../pictures/chris.jpg'
+import jason from '../pictures/jason.jpg'
+import rachel from '../pictures/rachel.jpg'
+import rodolfo from '../pictures/rodolfo.jpg'
   
 export const staffArray = [
     {
