@@ -1,0 +1,41 @@
+.contact-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1{
+    margin-bottom: 3rem;
+  }
+}
+.contact-items-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  h2 {
+    margin-bottom: .5rem;
+  }
+  span {
+    margin-bottom: .5rem;
+  }
+}
+.contact-map {
+  width: 50%;
+  display: flex;
+}
+
+.contact-reservations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  h2 {
+    margin-bottom: 1rem;
+  }
+}

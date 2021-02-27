@@ -2,37 +2,47 @@
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .card-container {
   display: flex;
+  justify-content: space-between;
+  width: 50%;
+  flex-wrap: wrap;
 }
 
 .bio-container {
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
+  line-height: 1.5rem;
+  width: 50%;
+}
+.bio-container p {
+  margin-bottom: 3.5rem;
 }
 
 .staff-card {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   height: 13rem;
-  width: 13rem;
+  width: 10rem;
   cursor: pointer;
-  margin: 1rem;
+  margin-right: 5rem;
+  margin-bottom: 2rem;
   border-radius: 10px;
   color: black;
 }
 .staff-card img {
-  height: 9rem;
-  width: 9rem;
+  height: 10rem;
+  width: 10rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px;
-  background: green;
+  background: #555;
 }
 .staff-card h2 {
   margin-top: 1rem;
