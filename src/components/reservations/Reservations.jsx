@@ -100,76 +100,106 @@ export const Reservations = () => {
   return (
     <div className='reservation-main-container'>
       <div className='reservation-options-container'>
-        <h2>Choose Your Service </h2>
-        {servicesArray.map((e) => (
-          <div
-            key={e.name}
-            onClick={() => setService(e.name)}
-            className='reservation-service'
-          >
-            {e.name}
+        {/* Service */}
+
+        <div className='reservation-service-container'>
+          <h2>Select a Service </h2>
+          <div className='reservation-service-buton-container'>
+            {servicesArray.map((e) => (
+              <button key={e.name} onClick={() => setService(e.name)}>
+                {e.name}
+              </button>
+            ))}
           </div>
-        ))}
-
-        <h2>Choose Your Barber</h2>
-        <div className='barber-card-container'>
-          {staffArray.map((member) => (
-            <div
-              key={member.name}
-              onClick={() => setBarber(member.name)}
-              className='reservation-staff-container'
-            >
-              <div>{member.name}</div>
-              <img className='reservation-picture' src={member.picture}></img>
-              <div>Schedule</div>
-              <div>{member.schedule}</div>
-            </div>
-          ))}
         </div>
-        <Calendar
-          value={selectedDay}
-          onChange={setSelectedDay}
-          disabledDays={
-            barber === 'Rachel'
-              ? disabledDaysRachel
-              : barber === 'Chris'
-              ? disabledDaysChris
-              : barber === 'Rodolfo'
-              ? disabledDaysRodolfo
-              : barber === 'Jason'
-              ? disabledDaysJason
-              : disabledDaysRachel
-          }
-          maximumDate={maximumDate}
-          inputPlaceholder='Select a day'
-        />
 
-        <br />
-        {times.map((time) => (
-          <button
-            key={time}
-            onClick={() => setApptTime(time)}
-            className='time-button'
-          >
-            {time}
-          </button>
-        ))}
-        <div className='time-button-container'></div>
-        <div>Name</div>
-        <input onChange={(e) => setName(e.target.value)} type='text'></input>
-        <div>Email</div>
-        <input type='email' onChange={(e) => setEmail(e.target.value)}></input>
+        {/* Barber  */}
+
+        <div className='barber-section-container'>
+          <h2>Select a barber</h2>
+          <div className='barber-card-container'>
+            {staffArray.map((member) => (
+              <button
+                key={member.name}
+                onClick={() => setBarber(member.name)}
+                className='barber-card'
+              >
+                <div className='barber-name'>{member.name}</div>
+                <img className='barber-card-image' src={member.picture}></img>
+                <div className='barber-schedule-header'>Schedule</div>
+                <div>{member.schedule}</div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Calendar */}
+
+        <div className='date-main-container'>
+          <h2>Select a date</h2>
+          <span>
+            Calendar dates and times align with selected barber's availability{' '}
+          </span>
+          <Calendar
+            value={selectedDay}
+            onChange={setSelectedDay}
+            disabledDays={
+              barber === 'Rachel'
+                ? disabledDaysRachel
+                : barber === 'Chris'
+                ? disabledDaysChris
+                : barber === 'Rodolfo'
+                ? disabledDaysRodolfo
+                : barber === 'Jason'
+                ? disabledDaysJason
+                : disabledDaysRachel
+            }
+            maximumDate={maximumDate}
+            inputPlaceholder='Select a day'
+          />
+        </div>
+
+        {/*  Time  */}
+        <div className='reservation-time-container'>
+          <h2>Select your time</h2>
+          <div className='reservation-button-container'>
+            {times.map((time) => (
+              <button
+                key={time}
+                onClick={() => setApptTime(time)}
+                className='time-button'
+              >
+                {time}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Name and email  */}
+        <div className='name-email-container'>
+          <h2>Name</h2>
+          <input onChange={(e) => setName(e.target.value)} type='text'></input>
+          <h2>Email</h2>
+          <input
+            type='email'
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
+          <button>Place Reservation</button>
+        </div>
       </div>
+
+      {/* reservation confirmation */}
+
       <div className='reservation-confirmation-container'>
         <h2>Your Reservation</h2>
-        <div className="reservation-details">
-         <div>Service: {service}</div> 
-         <div>Barber: {barber}</div>
-        <div>Date: {selectedMonth + ' ' + selectedDay.day}</div>
-        <div>Time: {apptTime}</div>
-        <div>Name: {name}</div>
-        <div>Email: {email}</div>
-        <button>Submit</button>
+        <div className='reservation-details'>
+          <div>Service: {service}</div>
+          <div>Barber: {barber}</div>
+          <div>Date: {selectedMonth + ' ' + selectedDay.day}</div>
+          <div>Time: {apptTime}</div>
+          <div>Name: {name}</div>
+          <div>Email: {email}</div>
+          <button>Place Reservation</button>
         </div>
       </div>
     </div>

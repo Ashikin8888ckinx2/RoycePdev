@@ -24,20 +24,6 @@
      object-fit: cover;
 }
 
-.reservation-staff-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 10rem;
-  margin: 1rem 1rem 1rem 0rem;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.barber-card-container {
-  display: flex;
-}
-
 .reservation-confirmation-container {
   display: flex;
   flex-direction: column;
@@ -49,7 +35,6 @@
 .reservation-options-container {
   width: 50%;
   height: 100%;
-  background: chartreuse;
 }
 
 .reservation-details {
@@ -58,4 +43,128 @@
   background: lime;
   width: 90%;
   height: 13rem;
+}
+
+.reservation-service-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.reservation-service-container h2 {
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.reservation-service-buton-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.reservation-service-buton-container button {
+  cursor: pointer;
+  height: 4rem;
+  width: 8rem;
+  margin: 0.5rem;
+  border-radius: 15px;
+  background: #4c3f15;
+  color: white;
+}
+
+.barber-section-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.barber-section-container h2 {
+  font-weight: 800;
+}
+
+.barber-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.barber-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  margin: 1rem;
+  border-radius: 15px;
+  background: #f3ebd3;
+  padding: 0.5rem 0rem;
+}
+
+.barber-card-image {
+  width: 8rem;
+  height: 8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.barber-schedule-header {
+  text-decoration: underline;
+}
+
+.barber-name {
+  margin-bottom: 0.5rem;
+}
+
+.date-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.date-main-container h2 {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.date-main-container span {
+  margin-bottom: 1rem;
+}
+
+.reservation-time-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.reservation-time-container h2 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.reservation-time-container button {
+  cursor: pointer;
+  background: #4c3f15;
+  color: white;
+  margin: 0.25rem;
+}
+
+.name-email-container h2 {
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+.name-email-container input {
+  height: 2.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 90%;
+  border: 2px solid #4c3f15;
+}
+.name-email-container button {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 90%;
+  color: white;
+  font-size: 1rem;
+  background: #ff7135;
+  border-radius: 15px;
 }/*# sourceMappingURL=reservations.css.map */

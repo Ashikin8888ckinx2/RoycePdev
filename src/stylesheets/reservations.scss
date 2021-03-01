@@ -1,3 +1,6 @@
+$orange: rgb(255, 113, 53);
+$dark-brown: hsl(46, 57%, 19%);
+$light-tan: hsl(46, 56%, 89%);
 
 .reservation-main-container {
   display: flex;
@@ -11,7 +14,7 @@
   background: green;
 }
 
-.time-button{
+.time-button {
   height: 2rem;
   width: 5rem;
   background-color: pink;
@@ -24,19 +27,6 @@
   object-fit: cover;
 }
 
-.reservation-staff-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 10rem;
-  margin: 1rem 1rem 1rem 0rem;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.barber-card-container {
-  display: flex;
-}
 
 .reservation-confirmation-container {
   display: flex;
@@ -46,15 +36,12 @@
   width: 50%;
 }
 
-
 .reservation-options-container {
-width: 50%;
-height: 100%;
-background: chartreuse;
-
+  width: 50%;
+  height: 100%;
 }
 
-.reservation-details  {
+.reservation-details {
   display: flex;
   flex-direction: column;
   background: lime;
@@ -62,3 +49,138 @@ background: chartreuse;
   height: 13rem;
 }
 
+.reservation-service-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h2 {
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+}
+
+.reservation-service-buton-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  button {
+    cursor: pointer;
+    height: 4rem;
+    width: 8rem;
+    margin: 0.5rem;
+    border-radius: 15px;
+    background: $dark-brown;
+    color: white;
+  }
+}
+
+// Barber
+
+.barber-section-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  h2 {
+    // margin-bottom: 1rem;
+    font-weight: 800;
+  }
+}
+
+.barber-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.barber-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  margin: 1rem;
+  border-radius: 15px;
+  background: $light-tan;
+  padding: .5rem 0rem;
+}
+
+.barber-card-image {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  margin-bottom: .5rem;
+}
+
+.barber-schedule-header {
+  text-decoration: underline;
+}
+
+.barber-name {
+  margin-bottom: .5rem;
+}
+
+
+// Date
+
+.date-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3rem;
+  h2 {
+    font-weight: 800;
+    margin-bottom: .5rem;
+  }
+  span {
+    margin-bottom: 1rem;
+  }
+}
+
+//Time 
+
+.reservation-time-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 3rem;
+  h2{
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  button {
+    cursor: pointer;
+    background: $dark-brown;
+    color: white;
+    margin: .25rem;
+  }
+}
+
+//Name and Email
+
+.name-email-container {
+  h2 {
+    margin-bottom: .5rem;
+    font-weight: 800;
+  }
+  input {
+    height: 2.5rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    width: 90%;
+    border: 2px solid $dark-brown;
+  }
+  button {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 90%;
+    color: white;
+    // font-weight: 800;
+    font-size: 1rem;
+    background: $orange;
+    border-radius: 15px;
+  }
+}

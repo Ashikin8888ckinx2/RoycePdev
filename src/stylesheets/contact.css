@@ -9,14 +9,12 @@
 
 .contact-items-container {
   display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
   width: 100%;
 }
 
 .contact-info {
   display: flex;
+  text-align: center;
   flex-direction: column;
   width: 50%;
 }
@@ -36,7 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 7.5rem;
 }
 .contact-reservations h2 {
   margin-bottom: 1rem;
