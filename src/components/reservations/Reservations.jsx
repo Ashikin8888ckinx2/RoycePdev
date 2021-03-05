@@ -191,15 +191,20 @@ export const Reservations = () => {
       {/* reservation confirmation */}
 
       <div className='reservation-confirmation-container'>
-        <h2>Your Reservation</h2>
         <div className='reservation-details'>
-          <div>Service: {service}</div>
-          <div>Barber: {barber}</div>
-          <div>Date: {selectedMonth + ' ' + selectedDay.day}</div>
-          <div>Time: {apptTime}</div>
-          <div>Name: {name}</div>
-          <div>Email: {email}</div>
-          <button>Place Reservation</button>
+          <h2>Your Reservation</h2>
+          <div className= "reservation-title">Service </div>
+          <div className= "reservation-selection">{service}</div>
+          <div className= "reservation-title">Barber </div>
+          <div className= "reservation-selection">{barber}</div>
+          <div className= "reservation-title">Date </div>
+          <div className= "reservation-selection">{selectedMonth + ' ' + selectedDay.day}</div>
+          <div className= "reservation-title">Time </div>
+          <div className= "reservation-selection">{apptTime}</div>
+          <div className= "reservation-title">Name </div>
+          <div className= "reservation-selection">{name}</div>
+          <div className= "reservation-title">Email </div>
+          <div className= "reservation-selection">{email}</div>
         </div>
       </div>
     </div>
