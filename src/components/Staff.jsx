@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import { staffArray } from './staffArray'
 import { CtaButton } from './CtaButton'
+import { NavLink } from 'react-router-dom'
 import '../stylesheets/staff.css'
 
 export const Staff = () => {
@@ -26,7 +27,7 @@ export const Staff = () => {
       </div>
       <div className='bio-container'>
         <p className='bio-paragraph'>{aboutMe}</p>
-        <CtaButton />
+        <NavLink exact to='/reservations'><CtaButton /></NavLink>
       </div>
     </div>
   )

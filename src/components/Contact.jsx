@@ -1,6 +1,7 @@
 import Map from './Map'
 import '../stylesheets/contact.css'
 import { CtaButton } from '../components/CtaButton'
+import { NavLink } from 'react-router-dom'
 
 export const Contact = () => {
   return (
@@ -16,7 +17,7 @@ export const Contact = () => {
           <span>Open 7 days per week 9am-7pm</span>
           <div className='contact-reservations'>
             <h2>Online Reservations</h2>
-            <CtaButton />
+            <NavLink exact to='/reservations'><CtaButton /></NavLink>
           </div>
         </div>
       </div>

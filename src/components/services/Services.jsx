@@ -3,6 +3,7 @@ import { Service } from './Service'
 import '../../stylesheets/services.css'
 import { servicesArray } from "./servicesArray"
 import { CtaButton } from "../../components/CtaButton"
+import { NavLink } from 'react-router-dom'
 
 export const Services = () => {
   
@@ -19,7 +20,7 @@ export const Services = () => {
         />
       ))}
       </div>
-      <CtaButton className="service-cta" />
+      <NavLink exact to='/reservations'><CtaButton className="service-cta" /> </NavLink>
     </div>
   )
 }

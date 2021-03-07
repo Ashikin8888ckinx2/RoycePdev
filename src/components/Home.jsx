@@ -2,7 +2,7 @@ import React from 'react'
 import { TiArrowRightOutline } from 'react-icons/ti'
 import { CtaButton } from './CtaButton'
 import '../stylesheets/home.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
 
 export const Home = () => {
   return (
@@ -29,8 +29,7 @@ export const Home = () => {
             <li>Events</li>
             <li>Bachelor Parties</li>
           </ul>
-
-          <CtaButton />
+          <NavLink exact to='/reservations'><CtaButton /></NavLink>
         </section>
       </div>
     </>

@@ -15,6 +15,7 @@
 
 .button-text {
   margin-right: .75rem;
+  text-decoration: none;
 }
 
 .arrow-container {
@@ -39,5 +40,9 @@
   margin-bottom: .2rem;
   margin-left: .1rem;
   font-weight: 300;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=button.css.map */
