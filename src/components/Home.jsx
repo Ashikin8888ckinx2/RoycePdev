@@ -8,8 +8,9 @@ export const Home = () => {
   return (
     <>
       <div className='home-container'>
-        <section>
-          <h1>Home of the best fades in San Diego.</h1>
+        <section className="home-first-section">
+        <h1 className="home-mobile-title">SDFadeShack</h1>
+          <h1 className="landing-title">Home of the best fades in San Diego.</h1>
           <TiArrowRightOutline className='landing-icon' />
         </section>
         <section>

@@ -9,6 +9,10 @@
   font-weight: 500;
 }
 
+body {
+  background: #f3ebd3;
+}
+
 .landing-backdrop {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +98,7 @@ nav ul li a:hover {
   color: #ff7135;
   text-decoration: none;
   font-size: 2rem;
+  margin-right: 2rem;
 }
 
 .watermark {
@@ -104,5 +109,48 @@ nav ul li a:hover {
   left: -5rem;
   z-index: -5;
   color: #e9dbaf;
+}
+
+@media (max-width: 850px) {
+  .home-first-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .landing-info-container {
+    width: 90%;
+    padding: 5rem 1rem;
+  }
+  .logo {
+    display: none;
+  }
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    top: -36px;
+    background: #4c3f15;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .nav-link {
+    color: white;
+  }
+}
+
+@media (max-width: 425px) {
+  .nav-link {
+    font-size: .85rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .nav-link {
+    font-size: .75rem;
+  }
 }
 /*# sourceMappingURL=landing-style.css.map */
