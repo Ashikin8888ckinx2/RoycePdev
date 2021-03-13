@@ -55,7 +55,7 @@
   height: 13rem;
   width: 10rem;
   cursor: pointer;
-  margin-right: 5rem;
+  margin-right: 3.5rem;
   margin-bottom: 2rem;
   border-radius: 10px;
   color: black;
@@ -72,5 +72,78 @@
 
 .staff-card h2 {
   margin-top: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .staff-section-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .bio-container {
+    width: 100%;
+  }
+  .staff-card {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .staff-card {
+    height: 10rem;
+    width: 7rem;
+  }
+  .staff-card img {
+    height: 8rem;
+    width: 8rem;
+  }
+}
+
+@media (max-width: 682px) {
+  .staff-card {
+    height: 13rem;
+    width: 10rem;
+    margin-right: 2rem;
+  }
+  .staff-card img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .staff-card {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 466px) {
+  .staff-card {
+    height: 10rem;
+    width: 7rem;
+  }
+  .staff-card img {
+    height: 7rem;
+    width: 7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .staff-card {
+    height: 8rem;
+    width: 6rem;
+  }
+  .staff-card img {
+    height: 5rem;
+    width: 6rem;
+  }
+  .staff-card h2 {
+    font-size: 1.1rem;
+  }
 }
 /*# sourceMappingURL=staff.css.map */

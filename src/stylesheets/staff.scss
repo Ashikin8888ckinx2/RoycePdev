@@ -10,10 +10,10 @@ $light-tan: hsl(46, 56%, 89%);
 }
 
 .card-container {
-display: flex;
-justify-content: space-between;
-width: 50%;
-flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  flex-wrap: wrap;
 }
 
 .bio-container {
@@ -28,7 +28,6 @@ flex-wrap: wrap;
   }
 }
 
-
 .staff-card {
   display: flex;
   align-items: center;
@@ -36,7 +35,7 @@ flex-wrap: wrap;
   height: 13rem;
   width: 10rem;
   cursor: pointer;
-  margin-right: 5rem;
+  margin-right: 3.5rem;
   margin-bottom: 2rem;
   border-radius: 10px;
   color: black;
@@ -50,5 +49,74 @@ flex-wrap: wrap;
   }
   h2 {
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .staff-section-container {
+    flex-direction: column;
+  }
+  .card-container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .bio-container {
+    width: 100%;
+  }
+  .staff-card {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .staff-card {
+    height: 10rem;
+    width: 7rem;
+    img {
+      height: 8rem;
+      width: 8rem;
+    }
+  }
+}
+
+@media (max-width: 682px) {
+  .staff-card {
+    height: 13rem;
+    width: 10rem;
+    margin-right: 2rem;
+    img {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .staff-card {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 466px) {
+  .staff-card {
+    height: 10rem;
+    width: 7rem;
+
+    img {
+      height: 7rem;
+      width: 7rem;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .staff-card {
+    height: 8rem;
+    width: 6rem;
+    img {
+      height: 5rem;
+      width: 6rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+    }
   }
 }

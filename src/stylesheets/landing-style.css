@@ -111,6 +111,16 @@ nav ul li a:hover {
   color: #e9dbaf;
 }
 
+@media (max-width: 1200px) {
+  .landing-info-container {
+    width: 90%;
+    padding: 5rem 1rem;
+  }
+  header {
+    width: 95%;
+  }
+}
+
 @media (max-width: 850px) {
   .home-first-section {
     display: -webkit-box;
@@ -119,10 +129,6 @@ nav ul li a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  .landing-info-container {
-    width: 90%;
-    padding: 5rem 1rem;
   }
   .logo {
     display: none;

@@ -9,14 +9,16 @@ $light-tan: hsl(46, 56%, 89%);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 73vw;
+  height: 100%;
+  width: 100%;
   margin-top: 3rem;
 }
 
 .service-card-container {
   display: flex;
   justify-content: center;
+  height: 100%;
+  width: 100%;
   flex-wrap: wrap;
   gap: 3rem;
   margin-bottom: 2rem;

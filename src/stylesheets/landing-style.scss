@@ -109,15 +109,21 @@ nav {
    color: hsl(46, 56%, 80%);
 }
 
+@media (max-width: 1200px) {
+  .landing-info-container {
+    width: 90%;
+    padding: 5rem 1rem;
+  }
+  header {
+    width: 95%;
+  }
+}
 @media (max-width: 850px) {
   .home-first-section {
     display: flex;
     justify-content: center;
   }
-  .landing-info-container {
-    width: 90%;
-    padding: 5rem 1rem;
-  }
+
   .logo {
     display: none;
   }
