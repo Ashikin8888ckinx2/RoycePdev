@@ -1,69 +1,65 @@
 .contact-main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .contact-main-container h1 {
   margin-bottom: 3rem;
 }
 
 .contact-items-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
 .contact-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 50%;
 }
-
 .contact-info h2 {
   margin-bottom: 0.5rem;
 }
-
 .contact-info span {
   margin-bottom: 0.5rem;
 }
 
 .contact-map {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .contact-reservations {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 7.5rem;
 }
-
 .contact-reservations h2 {
   margin-bottom: 1rem;
 }
-/*# sourceMappingURL=contact.css.map */
+
+@media (max-width: 850px) {
+  .contact-items-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .contact-reservations {
+    margin-top: 4rem;
+  }
+
+  .contact-map {
+    margin-bottom: 3rem;
+    align-self: center;
+  }
+}
+@media (max-width: 575px) {
+  .contact-map {
+    width: 100%;
+    height: auto;
+  }
+}/*# sourceMappingURL=contact.css.map */

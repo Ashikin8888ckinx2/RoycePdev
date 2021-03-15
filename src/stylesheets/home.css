@@ -3,39 +3,29 @@
 }
 
 .home-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
 }
-
 .home-container section {
   width: 45%;
 }
-
 .home-container section h1 {
   font-size: 4rem;
   font-weight: 800;
   margin-top: -0.8rem;
 }
-
 .home-container section h2 {
   font-weight: 800;
 }
-
 .home-container section p {
   margin: 2rem 0rem;
   line-height: 1.5rem;
 }
-
 .home-container section button {
   margin-top: 3rem;
 }
-
 .home-container section li {
   list-style-type: none;
   margin: 1rem 0rem;
@@ -49,29 +39,26 @@
 
 @media (max-width: 850px) {
   .home-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .home-container section {
     width: 100%;
     margin: 2rem 0rem;
   }
+
   .landing-icon {
     display: none;
   }
+
   .home-mobile-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: #ff7135;
   }
+
   .landing-title {
     display: none;
   }
 }
-
 @media (max-width: 500px) {
   .home-container section {
     margin: 1rem 0rem;
@@ -81,10 +68,8 @@
     margin-top: 2rem;
   }
 }
-
 @media (max-width: 370px) {
   .home-container section h1 {
     font-size: 2.5rem;
   }
-}
-/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=home.css.map */

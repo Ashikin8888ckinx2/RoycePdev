@@ -1,57 +1,33 @@
 .staff-section-container {
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 50%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .bio-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 1.5rem;
   width: 50%;
 }
-
 .bio-container p {
   margin-bottom: 3.5rem;
 }
 
 .staff-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   height: 13rem;
   width: 10rem;
   cursor: pointer;
@@ -60,7 +36,6 @@
   border-radius: 10px;
   color: black;
 }
-
 .staff-card img {
   height: 10rem;
   width: 10rem;
@@ -69,30 +44,28 @@
   border-radius: 15px;
   background: #555;
 }
-
 .staff-card h2 {
   margin-top: 1rem;
 }
 
 @media (max-width: 1200px) {
   .staff-section-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
+
   .card-container {
     width: 100%;
     margin-bottom: 3rem;
   }
+
   .bio-container {
     width: 100%;
   }
+
   .staff-card {
     margin: 1rem;
   }
 }
-
 @media (max-width: 890px) {
   .staff-card {
     height: 10rem;
@@ -103,7 +76,6 @@
     width: 8rem;
   }
 }
-
 @media (max-width: 682px) {
   .staff-card {
     height: 13rem;
@@ -115,13 +87,11 @@
     width: 10rem;
   }
 }
-
 @media (max-width: 500px) {
   .staff-card {
     margin-right: 1rem;
   }
 }
-
 @media (max-width: 466px) {
   .staff-card {
     height: 10rem;
@@ -132,7 +102,6 @@
     width: 7rem;
   }
 }
-
 @media (max-width: 360px) {
   .staff-card {
     height: 8rem;
@@ -145,5 +114,4 @@
   .staff-card h2 {
     font-size: 1.1rem;
   }
-}
-/*# sourceMappingURL=staff.css.map */
+}/*# sourceMappingURL=staff.css.map */

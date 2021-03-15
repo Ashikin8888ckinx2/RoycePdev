@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   h1 {
     margin-bottom: 3rem;
   }
@@ -25,7 +26,7 @@
   }
 }
 .contact-map {
-  width: 50%;
+  // width: 50%;
   display: flex;
 }
 
@@ -37,4 +38,29 @@
   h2 {
     margin-bottom: 1rem;
   }
+}
+
+@media (max-width: 850px) {
+  .contact-items-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .contact-reservations {
+    margin-top: 4rem;
+  }
+
+  .contact-map {
+    margin-bottom: 3rem;
+    align-self: center;
+  }
+}
+
+@media (max-width: 575px) {
+    .contact-map {
+      width: 100%;
+      height: auto;
+    }
 }

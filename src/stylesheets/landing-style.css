@@ -2,10 +2,9 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
@@ -14,58 +13,40 @@ body {
 }
 
 .landing-backdrop {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   width: 100vw;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #f3ebd3;
   z-index: 3;
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 80%;
   height: 4rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 2rem;
   padding: 0rem 3rem;
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 nav ul li {
   position: relative;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   list-style-type: none;
   padding: 0.5rem;
   cursor: pointer;
 }
-
 nav ul li a {
   text-decoration: none;
   font-weight: 600;
   color: black;
 }
-
 nav ul li a:hover {
   color: #ff7135;
 }
@@ -79,7 +60,7 @@ nav ul li a:hover {
   border-radius: 20px;
   display: block;
   margin-top: 0.5rem;
-  content: '';
+  content: "";
   width: 100%;
   height: 5px;
   background: #ff7135;
@@ -93,7 +74,7 @@ nav ul li a:hover {
 }
 
 .logo {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   color: #ff7135;
   text-decoration: none;
@@ -116,47 +97,43 @@ nav ul li a:hover {
     width: 90%;
     padding: 5rem 1rem;
   }
+
   header {
     width: 95%;
   }
 }
-
 @media (max-width: 850px) {
   .home-first-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
+
   .logo {
     display: none;
   }
+
   header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
+    align-items: center;
     position: fixed;
+    z-index: 999;
     top: -36px;
     background: #4c3f15;
     width: 100%;
-    padding-bottom: 1rem;
+    padding: 1rem 0rem;
   }
+
   .nav-link {
     color: white;
   }
 }
-
 @media (max-width: 425px) {
   .nav-link {
-    font-size: .85rem;
+    font-size: 0.85rem;
   }
 }
-
 @media (max-width: 370px) {
   .nav-link {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
-}
-/*# sourceMappingURL=landing-style.css.map */
+}/*# sourceMappingURL=landing-style.css.map */

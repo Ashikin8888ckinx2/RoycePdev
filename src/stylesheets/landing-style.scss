@@ -43,6 +43,7 @@ header {
 }
 
 nav {
+  
   ul {
     display: flex;
 
@@ -129,11 +130,13 @@ nav {
   }
  header {
    justify-content: center;
+   align-items: center;
    position: fixed;
+   z-index: 999;
    top: -36px;
    background: $dark-brown;
    width: 100%;
-  padding-bottom: 1rem;
+  padding: 1rem 0rem;
 
  }
  .nav-link {

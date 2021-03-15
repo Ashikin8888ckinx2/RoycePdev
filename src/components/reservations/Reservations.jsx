@@ -1,16 +1,3 @@
-// import React from 'react'
-// import { ResPageOne } from './ResPageOne'
-// import '../../stylesheets/reservations.css'
-
-// export const Reservations = () => {
-//   return (
-//     <div className="res">
-//       <h1>Reservations</h1>
-//       <ResPageOne />
-//     </div>
-//   )
-// }
-
 import { useState, useRef, useEffect } from 'react'
 import 'react-modern-calendar-datepicker/lib/DatePicker.css'
 import { DatePicker, Calendar } from 'react-modern-calendar-datepicker'
@@ -191,20 +178,32 @@ export const Reservations = () => {
       {/* reservation confirmation */}
 
       <div className='reservation-confirmation-container'>
+        <h2>Your Reservation</h2>
         <div className='reservation-details'>
-          <h2>Your Reservation</h2>
-          <div className= "reservation-title">Service </div>
-          <div className= "reservation-selection">{service}</div>
-          <div className= "reservation-title">Barber </div>
-          <div className= "reservation-selection">{barber}</div>
-          <div className= "reservation-title">Date </div>
-          <div className= "reservation-selection">{selectedMonth + ' ' + selectedDay.day}</div>
-          <div className= "reservation-title">Time </div>
-          <div className= "reservation-selection">{apptTime}</div>
-          <div className= "reservation-title">Name </div>
-          <div className= "reservation-selection">{name}</div>
-          <div className= "reservation-title">Email </div>
-          <div className= "reservation-selection">{email}</div>
+          <div className="seperator">
+          <div className='reservation-title'>Service </div>
+          <div className='reservation-selection'>{service}</div>
+          </div>
+          <div className="seperator">
+          <div className='reservation-title'>Barber </div>
+          <div className='reservation-selection'>{barber}</div>
+          </div>
+          <div className="seperator">
+          <div className='reservation-title'>Date </div>
+          <div className='reservation-selection'> {selectedMonth + ' ' + selectedDay.day}</div>
+          </div>
+          <div className="seperator">
+          <div className='reservation-title'>Time </div>
+          <div className='reservation-selection'>{apptTime}</div>
+          </div>
+          <div className="seperator">
+          <div className='reservation-title'>Name </div>
+          <div className='reservation-selection'>{name}</div>
+          </div>
+          <div className="seperator">
+          <div className='reservation-title'>Email </div>
+          <div className='reservation-selection'>{email}</div>
+          </div>
         </div>
       </div>
     </div>
