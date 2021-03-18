@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
+
+import { Calendar } from 'react-modern-calendar-datepicker'
 import 'react-modern-calendar-datepicker/lib/DatePicker.css'
-import { DatePicker, Calendar } from 'react-modern-calendar-datepicker'
+import DatePicker from 'react-modern-calendar-datepicker'
 import { servicesArray } from '../services/servicesArray'
 import { staffArray } from '../staffArray'
 import { disabledDaysChris } from '../employeeschedule/disabledDaysChris'
@@ -75,7 +77,6 @@ export const Reservations = () => {
   const [barber, setBarber] = useState()
 
   const e = new Date()
-  console.log(selectedDay)
 
   // const selectedDay = weekday[String(date.getDay())]
   const selectedMonth = months[selectedDay.month]
@@ -87,125 +88,37 @@ export const Reservations = () => {
   return (
     <div className='reservation-main-container'>
       <div className='reservation-options-container'>
-        {/* Service */}
-
-        <div className='reservation-service-container'>
-          <h2>Select a Service </h2>
-          <div className='reservation-service-buton-container'>
-            {servicesArray.map((e) => (
-              <button key={e.name} onClick={() => setService(e.name)}>
-                {e.name}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Barber  */}
-
-        <div className='barber-section-container'>
-          <h2>Select a barber</h2>
-          <div className='barber-card-container'>
-            {staffArray.map((member) => (
-              <button
-                key={member.name}
-                onClick={() => setBarber(member.name)}
-                className='barber-card'
-              >
-                <div className='barber-name'>{member.name}</div>
-                <img className='barber-card-image' src={member.picture}></img>
-                <div className='barber-schedule-header'>Schedule</div>
-                <div>{member.schedule}</div>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Calendar */}
-
-        <div className='date-main-container'>
-          <h2>Select a date</h2>
-          <span>
-            Calendar dates and times align with selected barber's availability{' '}
-          </span>
-          <Calendar
-            value={selectedDay}
-            onChange={setSelectedDay}
-            disabledDays={
-              barber === 'Rachel'
-                ? disabledDaysRachel
-                : barber === 'Chris'
-                ? disabledDaysChris
-                : barber === 'Rodolfo'
-                ? disabledDaysRodolfo
-                : barber === 'Jason'
-                ? disabledDaysJason
-                : disabledDaysRachel
-            }
-            maximumDate={maximumDate}
-            inputPlaceholder='Select a day'
-          />
-        </div>
-
-        {/*  Time  */}
-        <div className='reservation-time-container'>
-          <h2>Select your time</h2>
-          <div className='reservation-button-container'>
-            {times.map((time) => (
-              <button
-                key={time}
-                onClick={() => setApptTime(time)}
-                className='time-button'
-              >
-                {time}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Name and email  */}
-        <div className='name-email-container'>
-          <h2>Name</h2>
-          <input onChange={(e) => setName(e.target.value)} type='text'></input>
-          <h2>Email</h2>
-          <input
-            type='email'
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <button>Place Reservation</button>
-        </div>
+        <label for='service'>Service: </label>
+        <select id='service' name='service'>
+          {servicesArray.map((service) => (
+            <option>{service.name}</option>
+          ))}
+        </select>
+        <label for='barber'>Barber: </label>
+        <select id='barber' name='barber'>
+          {staffArray.map((staff) => (
+            <option>{staff.name}</option>
+          ))}
+        </select>
+        <label> Date: </label>
+        <DatePicker
+          value={selectedDay}
+          onChange={setSelectedDay}
+          inputPlaceholder='Select a day'
+        />
+        <label for='times'>Time: </label>
+        <select id='times' name='times'>
+          {times.map((time) => (
+            <option>{time}</option>
+          ))}
+        </select>
+        <label for='name'>Name: </label>
+        <input type='text' id='name' name='name' />
+        <label for='email'>Email: </label>
+        <input type='email' id='email' name='email' />
+        <button type='submit'>Book Reservation</button>
       </div>
-
-      {/* reservation confirmation */}
-
-      <div className='reservation-confirmation-container'>
-        <h2>Your Reservation</h2>
-        <div className='reservation-details'>
-          <div className="seperator">
-          <div className='reservation-title'>Service </div>
-          <div className='reservation-selection'>{service}</div>
-          </div>
-          <div className="seperator">
-          <div className='reservation-title'>Barber </div>
-          <div className='reservation-selection'>{barber}</div>
-          </div>
-          <div className="seperator">
-          <div className='reservation-title'>Date </div>
-          <div className='reservation-selection'> {selectedMonth + ' ' + selectedDay.day}</div>
-          </div>
-          <div className="seperator">
-          <div className='reservation-title'>Time </div>
-          <div className='reservation-selection'>{apptTime}</div>
-          </div>
-          <div className="seperator">
-          <div className='reservation-title'>Name </div>
-          <div className='reservation-selection'>{name}</div>
-          </div>
-          <div className="seperator">
-          <div className='reservation-title'>Email </div>
-          <div className='reservation-selection'>{email}</div>
-          </div>
-        </div>
-      </div>
+      {/* </div> */}
     </div>
   )
 }
