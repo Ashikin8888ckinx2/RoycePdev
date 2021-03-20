@@ -1,6 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
-
-import { Calendar } from 'react-modern-calendar-datepicker'
+import { useState } from 'react'
 import 'react-modern-calendar-datepicker/lib/DatePicker.css'
 import DatePicker from 'react-modern-calendar-datepicker'
 import { servicesArray } from '../services/servicesArray'
@@ -12,14 +10,7 @@ import { disabledDaysRodolfo } from '../employeeschedule/disabledDaysRodolfo'
 import '../../stylesheets/reservations.css'
 
 export const Reservations = () => {
-  const weekday = new Array(7)
-  weekday[0] = 'Sunday'
-  weekday[1] = 'Monday'
-  weekday[2] = 'Tuesday'
-  weekday[3] = 'Wednesday'
-  weekday[4] = 'Thursday'
-  weekday[5] = 'Friday'
-  weekday[6] = 'Saturday'
+
 
   const months = new Array()
   months[1] = 'January'
@@ -55,6 +46,7 @@ export const Reservations = () => {
     '6:00pm',
     '6:30pm',
   ]
+
   const maximumDate = {
     year: 2021,
     month: 12,
@@ -68,57 +60,82 @@ export const Reservations = () => {
     day: d.getDate(),
   }
 
-  const [date, setDate] = useState(new Date())
   const [selectedDay, setSelectedDay] = useState(defaultValue)
   const [apptTime, setApptTime] = useState()
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [service, setService] = useState()
-  const [barber, setBarber] = useState()
+  const [barber, setBarber] = useState('chris')
 
-  const e = new Date()
 
-  // const selectedDay = weekday[String(date.getDay())]
-  const selectedMonth = months[selectedDay.month]
-  // const selectedDate = date.getDate()
-
-  function onChange(selectedValue) {
-    setDate(selectedValue)
+  const barberChange = (e) => {
+    setBarber(e.target.value)
   }
+  const serviceChange = (e) => {
+    setService(e.target.value)
+  }
+  const timeChange = (e) => {
+    setApptTime(e.target.value)
+  }
+  const nameChange = (e) => {
+    setName(e.target.value)
+  }
+  const emailChange = (e) => {
+    setEmail(e.target.value)
+  }
+
   return (
     <div className='reservation-main-container'>
-      <div className='reservation-options-container'>
-        <label for='service'>Service: </label>
-        <select id='service' name='service'>
+      <div className='reservation-items-container'>
+        <label htmlFor='service'>Service: </label>
+        <select id='service' name='service' onChange={serviceChange}>
           {servicesArray.map((service) => (
-            <option>{service.name}</option>
+            <option key={service.name}>{service.name}</option>
           ))}
         </select>
-        <label for='barber'>Barber: </label>
-        <select id='barber' name='barber'>
+        <label htmlFor='barber'>Barber: </label>
+        <select onChange={barberChange} id='barber' name='barber'>
           {staffArray.map((staff) => (
-            <option>{staff.name}</option>
+            <option key={staff.name}>{staff.name}</option>
           ))}
         </select>
         <label> Date: </label>
         <DatePicker
+          disabledDays={
+            barber === 'Rachel'
+              ? disabledDaysRachel
+              : barber === 'Chris'
+              ? disabledDaysChris
+              : barber === 'Rodolfo'
+              ? disabledDaysRodolfo
+              : barber === 'Jason'
+              ? disabledDaysJason
+              : disabledDaysRachel
+          }
           value={selectedDay}
           onChange={setSelectedDay}
-          inputPlaceholder='Select a day'
+          maximumDate={maximumDate}
         />
-        <label for='times'>Time: </label>
-        <select id='times' name='times'>
+        <label htmlFor='times'>Time: </label>
+        <select onChange={timeChange} id='times' name='times'>
           {times.map((time) => (
-            <option>{time}</option>
+            <option key={time}>{time}</option>
           ))}
         </select>
-        <label for='name'>Name: </label>
-        <input type='text' id='name' name='name' />
-        <label for='email'>Email: </label>
-        <input type='email' id='email' name='email' />
+        <label htmlFor='name'>Name: </label>
+        <input onChange={nameChange} type='text' id='name' name='name' />
+        <label htmlFor='email'>Email: </label>
+        <input onChange={emailChange} type='email' id='email' name='email' />
         <button type='submit'>Book Reservation</button>
+
+
+        {/* <div>{barber}</div>
+        <div>{service}</div>
+        <div>{apptTime}</div>
+        <div>{months[selectedDay.month] + ' ' + selectedDay.day}</div>
+        <div>{name}</div>
+        <div>{email}</div> */}
       </div>
-      {/* </div> */}
     </div>
   )
 }

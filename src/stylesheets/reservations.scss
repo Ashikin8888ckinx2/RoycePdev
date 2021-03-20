@@ -7,13 +7,21 @@ $light-tan: hsl(46, 56%, 89%);
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: yellow;
+  height: 100vh;
+  background: green;
 }
 
+.reservation-items-container {
+  width: 90%;
+  height: 100%;
+  background: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .reservation-options-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background: green;
 }
