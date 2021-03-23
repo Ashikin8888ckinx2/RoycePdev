@@ -1,19 +1,44 @@
 .reservation-main-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  background: green;
+}
+.reservation-main-container p {
+  width: 350px;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .reservation-items-container {
-  width: 90%;
-  height: 100%;
-  background: yellow;
+  width: 400px;
+  margin-top: 2.5rem;
+  background: #4c3f15;
+  color: #ff7135;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  border-radius: 15px;
+  padding: 2rem;
+}
+.reservation-items-container label {
+  margin-bottom: 0.5rem;
+}
+.reservation-items-container input {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+.reservation-items-container select {
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+.reservation-items-container button {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: orange;
+  border-radius: 15px;
+  margin-top: 0.5rem;
 }
 
 .reservation-options-container {
@@ -21,4 +46,60 @@
   flex-direction: column;
   width: 50%;
   height: 100%;
+}
+
+.reservation-confirmation-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.reservation-confirmation-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 1001;
+}
+.reservation-confirmation-items-container h2 {
+  text-align: center;
+}
+.reservation-confirmation-items-container p {
+  margin: 1rem 0rem;
+}
+.reservation-confirmation-items-container button {
+  cursor: pointer;
+  width: 100%;
+  background: #ff7135;
+  border-radius: 999rem;
+  padding: 0.5rem;
+  font-weight: 800;
+  border: 3px solid black;
+  margin-top: 0.5rem;
+}
+.reservation-confirmation-items-container button:active {
+  background: #df7f6e;
+}
+.reservation-confirmation-items-container div {
+  color: #ff7135;
+  font-weight: 800;
+}
+.reservation-confirmation-items-container span {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+  .reservation-items-container {
+    width: 300px;
+  }
 }/*# sourceMappingURL=reservations.css.map */

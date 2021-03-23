@@ -4,24 +4,109 @@ $light-tan: hsl(46, 56%, 89%);
 
 .reservation-main-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  background: green;
+  p {
+    width: 350px;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 }
 
 .reservation-items-container {
-  width: 90%;
-  height: 100%;
-  background: yellow;
+  width: 400px;
+  margin-top: 2.5rem;
+  background: $dark-brown;
+  color: $orange;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  border-radius: 15px;
+  padding: 2rem;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+  input {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+  select {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+  }
+  button {
+    cursor: pointer;
+    padding: 0.5rem;
+    background: orange;
+    border-radius: 15px;
+    margin-top: 0.5rem;
+  }
+
 }
 .reservation-options-container {
   display: flex;
   flex-direction: column;
   width: 50%;
   height: 100%;
+}
+
+.reservation-confirmation-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.reservation-confirmation-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border: 3px solid black;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 1001;
+  
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin: 1rem 0rem;
+  }
+
+  button {
+    cursor: pointer;
+    width: 100%;
+    background: $orange;
+    border-radius: 999rem;
+    padding: 0.5rem;
+    font-weight: 800;
+    border: 3px solid black;
+    margin-top: .5rem;
+  }
+  button:active {
+    background: rgb(223, 127, 110);
+  }
+  div {
+  color: $orange;
+  font-weight: 800;
+  }
+  span {
+    margin-bottom: .5rem;
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .reservation-items-container {
+    width: 300px;
+  }
 }

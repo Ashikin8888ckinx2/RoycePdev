@@ -8,10 +8,9 @@ import { disabledDaysJason } from '../employeeschedule/disabledDaysJason'
 import { disabledDaysRachel } from '../employeeschedule/disabledDaysRachel'
 import { disabledDaysRodolfo } from '../employeeschedule/disabledDaysRodolfo'
 import '../../stylesheets/reservations.css'
+import { ReservationConfirmation } from '../reservations/ReservationConfirmation'
 
 export const Reservations = () => {
-
-
   const months = new Array()
   months[1] = 'January'
   months[2] = 'February'
@@ -65,8 +64,7 @@ export const Reservations = () => {
   const [name, setName] = useState()
   const [email, setEmail] = useState()
   const [service, setService] = useState()
-  const [barber, setBarber] = useState('chris')
-
+  const [barber, setBarber] = useState('')
 
   const barberChange = (e) => {
     setBarber(e.target.value)
@@ -86,6 +84,11 @@ export const Reservations = () => {
 
   return (
     <div className='reservation-main-container'>
+      <h1>Reservations</h1>
+      <p>
+        Dates and times available reflect the availability of the Barber
+        selected
+      </p>
       <div className='reservation-items-container'>
         <label htmlFor='service'>Service: </label>
         <select id='service' name='service' onChange={serviceChange}>
@@ -127,15 +130,15 @@ export const Reservations = () => {
         <label htmlFor='email'>Email: </label>
         <input onChange={emailChange} type='email' id='email' name='email' />
         <button type='submit'>Book Reservation</button>
-
-
-        {/* <div>{barber}</div>
-        <div>{service}</div>
-        <div>{apptTime}</div>
-        <div>{months[selectedDay.month] + ' ' + selectedDay.day}</div>
-        <div>{name}</div>
-        <div>{email}</div> */}
       </div>
+      <ReservationConfirmation
+        barber={barber}
+        apptTime={apptTime}
+        date={months[selectedDay.month] + ' ' + selectedDay.day}
+        name={name}
+        email={email}
+        service={service}
+      />
     </div>
   )
 }
