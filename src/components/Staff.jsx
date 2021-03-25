@@ -16,18 +16,22 @@ export const Staff = () => {
             onClick={() => setAboutMe(member.about)}
             className='staff-card'
           >
-            <img
-              className='picture-container'
-              src={member.picture}
-              alt={member.name}
-            />
+            <div className='img-container'>
+              <img
+                className='picture-container'
+                src={member.picture}
+                alt={member.name}
+              />
+            </div>
             <h2>{member.name}</h2>
           </div>
         ))}
       </div>
       <div className='bio-container'>
         <p className='bio-paragraph'>{aboutMe}</p>
-        <NavLink exact to='/reservations'><CtaButton /></NavLink>
+        <NavLink exact to='/reservations'>
+          <CtaButton />
+        </NavLink>
       </div>
     </div>
   )

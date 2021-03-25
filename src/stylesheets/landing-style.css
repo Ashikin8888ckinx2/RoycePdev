@@ -3,20 +3,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: bold;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
 }
 
 body {
   background: #f3ebd3;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 .landing-backdrop {
   display: flex;
   align-items: center;
   position: relative;
-  width: 100vw;
   flex-direction: column;
   background-color: #f3ebd3;
   z-index: 3;
@@ -68,9 +69,10 @@ nav ul li a:hover {
 }
 
 .landing-info-container {
-  width: 80%;
+  width: 75%;
   height: 100%;
-  padding: 5rem 3rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 .logo {

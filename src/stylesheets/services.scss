@@ -1,7 +1,4 @@
-
-$orange: rgb(255, 113, 53);
-$dark-brown: #4c3f15;
-$light-tan: hsl(46, 56%, 89%);
+@import 'variables';
 
 
 .services-container {
@@ -11,7 +8,7 @@ $light-tan: hsl(46, 56%, 89%);
   align-items: center;
   height: 100%;
   width: 100%;
-  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .service-card-container {

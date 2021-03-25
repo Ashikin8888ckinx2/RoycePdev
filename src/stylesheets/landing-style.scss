@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
-
-$orange: rgb(255, 113, 53);
-$dark-brown: #4c3f15;
-$light-tan: hsl(46, 56%, 89%);
+@import 'variables';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: bold;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  
 }
 
 body {
   background: $light-tan;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 @mixin flex-center {
@@ -26,8 +24,7 @@ body {
 .landing-backdrop {
   @include flex-center;
   position: relative;
-  // height: 100vh;
-  width: 100vw;
+
   flex-direction: column;
   background-color: hsl(46, 56%, 89%);
   z-index: 3
@@ -43,7 +40,6 @@ header {
 }
 
 nav {
-  
   ul {
     display: flex;
 
@@ -81,14 +77,12 @@ nav {
    left: 1px;
 }
 
-// .nav-link:hover:after {
-
-// }
 
 .landing-info-container {
-  width: 80%;
+  width: 75%;
   height: 100%;
-  padding: 5rem 3rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 .logo {

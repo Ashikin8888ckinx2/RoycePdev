@@ -8,7 +8,6 @@ import { disabledDaysJason } from '../employeeschedule/disabledDaysJason'
 import { disabledDaysRachel } from '../employeeschedule/disabledDaysRachel'
 import { disabledDaysRodolfo } from '../employeeschedule/disabledDaysRodolfo'
 import '../../stylesheets/reservations.css'
-import { ReservationConfirmation } from '../reservations/ReservationConfirmation'
 
 export const Reservations = () => {
   const months = new Array()
@@ -53,6 +52,7 @@ export const Reservations = () => {
   }
 
   const d = new Date()
+  
   const defaultValue = {
     year: 2021,
     month: 11,
@@ -65,6 +65,7 @@ export const Reservations = () => {
   const [email, setEmail] = useState()
   const [service, setService] = useState()
   const [barber, setBarber] = useState('')
+  const [confirmation, setConfirmation] = useState(true)
 
   const barberChange = (e) => {
     setBarber(e.target.value)
@@ -81,12 +82,18 @@ export const Reservations = () => {
   const emailChange = (e) => {
     setEmail(e.target.value)
   }
+  const openWindow = () => {
+    setConfirmation(false)
+  }
+  const closeWindow = () => {
+    setConfirmation(true)
+  }
 
   return (
     <div className='reservation-main-container'>
       <h1>Reservations</h1>
       <p>
-        Dates and times available reflect the availability of the Barber
+        Dates and times available reflect the schedule of the Barber
         selected
       </p>
       <div className='reservation-items-container'>
@@ -129,16 +136,27 @@ export const Reservations = () => {
         <input onChange={nameChange} type='text' id='name' name='name' />
         <label htmlFor='email'>Email: </label>
         <input onChange={emailChange} type='email' id='email' name='email' />
-        <button type='submit'>Book Reservation</button>
+        <button type='submit' onClick={openWindow}>
+          Book Reservation
+        </button>
       </div>
-      <ReservationConfirmation
-        barber={barber}
-        apptTime={apptTime}
-        date={months[selectedDay.month] + ' ' + selectedDay.day}
-        name={name}
-        email={email}
-        service={service}
-      />
+
+      <div
+        className={`reservation-confirmation-container ${
+          confirmation && 'hide-display'
+        }`}
+      >
+        <div className='reservation-confirmation-items-container'>
+          <p>
+            You're all set for your {service} with {barber} on{' '}
+            {months[selectedDay.month] + ' ' + selectedDay.day} at {apptTime},{' '}
+            {name}. A reminder email has been sent to {email}. If you need to
+            make any changes or cancel the appointment, give us a call at
+            619-867-5309.{' '}
+          </p>
+          <button onClick={closeWindow}>Close</button>
+        </div>
+      </div>
     </div>
   )
 }

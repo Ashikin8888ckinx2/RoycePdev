@@ -19,6 +19,10 @@
   align-items: center;
   line-height: 1.5rem;
   width: 50%;
+  background: #f3ebd3;
+  border: 10px solid #4c3f15;
+  padding: 1rem;
+  border-radius: 15px;
 }
 .bio-container p {
   margin-bottom: 3.5rem;
@@ -43,9 +47,20 @@
      object-fit: cover;
   border-radius: 15px;
   background: #555;
+  transition: 200ms ease-in-out;
+}
+.staff-card img:hover {
+  transform: scale(1.045);
 }
 .staff-card h2 {
   margin-top: 1rem;
+}
+
+.img-container {
+  overflow: hidden;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 15px;
 }
 
 @media (max-width: 1200px) {
@@ -75,6 +90,11 @@
     height: 8rem;
     width: 8rem;
   }
+
+  .img-container {
+    height: 8rem;
+    width: 8rem;
+  }
 }
 @media (max-width: 682px) {
   .staff-card {
@@ -83,6 +103,11 @@
     margin-right: 2rem;
   }
   .staff-card img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .img-container {
     height: 10rem;
     width: 10rem;
   }
@@ -101,6 +126,11 @@
     height: 7rem;
     width: 7rem;
   }
+
+  .img-container {
+    height: 7rem;
+    width: 7rem;
+  }
 }
 @media (max-width: 360px) {
   .staff-card {
@@ -113,5 +143,10 @@
   }
   .staff-card h2 {
     font-size: 1.1rem;
+  }
+
+  .img-container {
+    height: 5rem;
+    width: 6rem;
   }
 }/*# sourceMappingURL=staff.css.map */

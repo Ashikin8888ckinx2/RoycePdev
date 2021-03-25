@@ -33,7 +33,7 @@ export const Services = () => {
       ))}
       </div>
 
-      <NavLink exact to='/reservations'><CtaButton className="service-cta" /> </NavLink>
+      <NavLink exact to='/reservations'><CtaButton /> </NavLink>
     </div>
   )
 }
