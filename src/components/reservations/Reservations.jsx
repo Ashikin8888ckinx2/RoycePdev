@@ -52,7 +52,7 @@ export const Reservations = () => {
   }
 
   const d = new Date()
-  
+
   const defaultValue = {
     year: 2021,
     month: 11,
@@ -93,18 +93,19 @@ export const Reservations = () => {
     <div className='reservation-main-container'>
       <h1>Reservations</h1>
       <p>
-        Dates and times available reflect the schedule of the Barber
-        selected
+        Dates and times available reflect the schedule of the Barber selected
       </p>
       <div className='reservation-items-container'>
         <label htmlFor='service'>Service: </label>
         <select id='service' name='service' onChange={serviceChange}>
+        <option value='value' selected></option>
           {servicesArray.map((service) => (
             <option key={service.name}>{service.name}</option>
           ))}
         </select>
         <label htmlFor='barber'>Barber: </label>
         <select onChange={barberChange} id='barber' name='barber'>
+          <option value='value' selected></option>
           {staffArray.map((staff) => (
             <option key={staff.name}>{staff.name}</option>
           ))}
@@ -128,6 +129,7 @@ export const Reservations = () => {
         />
         <label htmlFor='times'>Time: </label>
         <select onChange={timeChange} id='times' name='times'>
+        <option value='value' selected></option>
           {times.map((time) => (
             <option key={time}>{time}</option>
           ))}
