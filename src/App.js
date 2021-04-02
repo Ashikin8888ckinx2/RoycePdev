@@ -5,7 +5,7 @@ import { Home } from './components/Home'
 import { Contact } from './components/Contact'
 import { Reservations } from './components/reservations/Reservations'
 import './stylesheets/landing-style.css'
-import { BrowserRouter as Router, Switch, Route, NavLink, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'
 
 function App() {
   return (

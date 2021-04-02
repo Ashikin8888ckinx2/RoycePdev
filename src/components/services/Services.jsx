@@ -5,20 +5,10 @@ import { servicesArray } from "./servicesArray"
 import { CtaButton } from "../../components/CtaButton"
 import { NavLink } from 'react-router-dom'
 
-import React, { useState } from "react";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
-import DatePicker from "react-modern-calendar-datepicker";
 
 
 export const Services = () => {
-  const d = new Date()
-  const defaultValue = {
-    year: 2021,
-    month: 11,
-    day: d.getDate(),
-  }
-  const [selectedDay, setSelectedDay] = useState(defaultValue)
-  
 
   return (
     <div className='services-container'>

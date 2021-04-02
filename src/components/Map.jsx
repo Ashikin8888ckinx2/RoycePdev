@@ -5,9 +5,7 @@ import Marker from './Marker';
 import keys from "../components/keys"
 
 
-
-
-const AnyReactComponent = (text) => <div>{text}</div>;
+// const AnyReactComponent = (text) => <div>{text}</div>;
 
 const Map = () => {
     const [center, setCenter] = useState({lat: 32.797370, lng: -117.250600 });

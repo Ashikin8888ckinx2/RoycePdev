@@ -2,7 +2,7 @@ import React from 'react'
 import { TiArrowRightOutline } from 'react-icons/ti'
 import { CtaButton } from './CtaButton'
 import '../stylesheets/home.css'
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
+import { BrowserRouter as NavLink } from 'react-router-dom'
 
 export const Home = () => {
   return (
