@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 import keys from "../components/keys"
@@ -8,8 +8,10 @@ import keys from "../components/keys"
 // const AnyReactComponent = (text) => <div>{text}</div>;
 
 const Map = () => {
-    const [center, setCenter] = useState({lat: 32.797370, lng: -117.250600 });
-    const [zoom, setZoom] = useState(17);
+    const center = { lat: 32.797370, lng: -117.250600}
+    const zoom = 17;
+    // const [center, setCenter] = useState({lat: 32.797370, lng: -117.250600 });
+    // const [zoom, setZoom] = useState(17);
     return (
         <div style={{ height: '30rem', width: '30rem' }}>
         <GoogleMapReact

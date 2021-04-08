@@ -98,14 +98,14 @@ export const Reservations = () => {
       <div className='reservation-items-container'>
         <label htmlFor='service'>Service: </label>
         <select id='service' name='service' onChange={serviceChange}>
-        <option value='value' selected></option>
+        <option value='value'></option>
           {servicesArray.map((service) => (
             <option key={service.name}>{service.name}</option>
           ))}
         </select>
         <label htmlFor='barber'>Barber: </label>
-        <select onChange={barberChange} id='barber' name='barber'>
-          <option value='value' selected></option>
+        <select defaultValue = " " onChange={barberChange} id='barber' name='barber'>
+          <option value='value'></option>
           {staffArray.map((staff) => (
             <option key={staff.name}>{staff.name}</option>
           ))}
@@ -129,7 +129,7 @@ export const Reservations = () => {
         />
         <label htmlFor='times'>Time: </label>
         <select onChange={timeChange} id='times' name='times'>
-        <option value='value' selected></option>
+        <option value='value'></option>
           {times.map((time) => (
             <option key={time}>{time}</option>
           ))}
