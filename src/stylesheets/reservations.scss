@@ -8,6 +8,9 @@
   width: 100%;
   margin-top: -2rem;
   margin-bottom: 3rem;
+  animation-name: fade;
+  animation-duration: 1s;
+
   p {
     width: 350px;
     text-align: center;
@@ -122,5 +125,14 @@
     p {
       width: 280px;
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -3,6 +3,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .card-container {
@@ -79,6 +83,22 @@
 
   .staff-card {
     margin: 1rem;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @media (max-width: 890px) {

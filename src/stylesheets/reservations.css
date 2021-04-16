@@ -6,6 +6,10 @@
   width: 100%;
   margin-top: -2rem;
   margin-bottom: 3rem;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 .reservation-main-container p {
   width: 350px;
@@ -117,5 +121,21 @@
   }
   .reservation-confirmation-items-container p {
     width: 280px;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=reservations.css.map */

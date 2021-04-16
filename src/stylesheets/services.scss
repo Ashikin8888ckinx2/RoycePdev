@@ -9,6 +9,8 @@
   height: 100%;
   width: 100%;
   margin-bottom: 3rem;
+  animation-name: fade;
+  animation-duration: 1s;
 }
 
 .service-card-container {
@@ -65,4 +67,13 @@
   width: 100%;
   background-color: $orange;
   border-radius: 15px;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,8 +1,13 @@
+
+@import 'variables';
+
 .contact-main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  animation-name: fade;
+  animation-duration: 1s;
   h1 {
     margin-bottom: 3rem;
   }
@@ -71,3 +76,12 @@
 //       height: 300px;
 //     }
 // }
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

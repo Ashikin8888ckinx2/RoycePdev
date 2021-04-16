@@ -7,6 +7,10 @@
   justify-content: space-between;
   height: 100%;
   width: 100%;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 .home-container section {
   width: 45%;
@@ -71,5 +75,21 @@
 @media (max-width: 370px) {
   .home-container section h1 {
     font-size: 2.5rem;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=home.css.map */
