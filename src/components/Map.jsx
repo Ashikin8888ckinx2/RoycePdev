@@ -1,7 +1,7 @@
 // import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react'
 import Marker from './Marker'
-import {todo } from '../netlify/functions/todo'
+import { todo } from '../netlify/functions/todo'
 
 const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
 
