@@ -1,7 +1,6 @@
 // import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react'
 import Marker from './Marker'
-import { todo } from '../netlify/functions/todo'
 
 const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_KEY
 
@@ -11,7 +10,7 @@ const Map = () => {
   return (
     <div style={{ height: '30rem', width: '30rem' }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: todo }}
+        bootstrapURLKeys={{ key: GOOGLE_KEY }}
         defaultCenter={center}
         defaultZoom={zoom}
       >
