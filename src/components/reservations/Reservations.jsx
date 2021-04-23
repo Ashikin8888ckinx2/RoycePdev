@@ -10,40 +10,10 @@ import { disabledDaysRodolfo } from '../employeeschedule/disabledDaysRodolfo'
 import '../../stylesheets/reservations.css'
 
 export const Reservations = () => {
-  const months = new Array()
-  months[1] = 'January'
-  months[2] = 'February'
-  months[3] = 'March'
-  months[4] = 'April'
-  months[5] = 'May'
-  months[6] = 'June'
-  months[7] = 'July'
-  months[8] = 'August'
-  months[9] = 'September'
-  months[10] = 'October'
-  months[11] = 'November'
-  months[12] = 'December'
 
-  const times = [
-    '10:00am',
-    '10:30am',
-    '11:00am',
-    '11:30am',
-    '12:00pm',
-    '12:30pm',
-    '1:00pm',
-    '1:30pm',
-    '2:00pm',
-    '2:30pm',
-    '3:00pm',
-    '3:30pm',
-    '4:00pm',
-    '4:30pm',
-    '5:00pm',
-    '5:30pm',
-    '6:00pm',
-    '6:30pm',
-  ]
+  const months = ['not a month', 'January','February','March','April','May','June','July','August','September','October','November','December']
+
+  const times = ['10:00am','10:30am','11:00am','11:30am','12:00pm','12:30pm','1:00pm','1:30pm','2:00pm','2:30pm','3:00pm','3:30pm','4:00pm','4:30pm','5:00pm','5:30pm','6:00pm','6:30pm']
 
   const maximumDate = {
     year: 2021,
@@ -52,7 +22,6 @@ export const Reservations = () => {
   }
 
   const d = new Date()
-
   const defaultValue = {
     year: 2021,
     month: 11,
@@ -61,10 +30,10 @@ export const Reservations = () => {
 
   const [selectedDay, setSelectedDay] = useState(defaultValue)
   const [apptTime, setApptTime] = useState()
-  const [name, setName] = useState()
+  const [customerName, setCustomerName] = useState()
   const [email, setEmail] = useState()
   const [service, setService] = useState()
-  const [barber, setBarber] = useState('')
+  const [barber, setBarber] = useState()
   const [confirmation, setConfirmation] = useState(true)
 
   const barberChange = (e) => {
@@ -77,16 +46,47 @@ export const Reservations = () => {
     setApptTime(e.target.value)
   }
   const nameChange = (e) => {
-    setName(e.target.value)
+    setCustomerName(e.target.value)
   }
   const emailChange = (e) => {
     setEmail(e.target.value)
   }
-  const openWindow = () => {
-    setConfirmation(false)
-  }
   const closeWindow = () => {
+    // setService(undefined)
+    // setBarber(undefined)
+    // setApptTime(undefined)
+    // setCustomerName(undefined)
+    // setEmail(undefined)
     setConfirmation(true)
+  }
+
+  const openWindow = () => {
+    if (service === undefined) {
+      alert('Please select a service')
+      return
+    }
+    if (barber === undefined) {
+      alert('Please select a barber')
+      return
+    }
+    if (apptTime === undefined) {
+      alert('Please select a time for your appointment')
+      return
+    }
+    if (customerName === undefined) {
+      alert('Please enter your name')
+      return
+    }
+    if (email === undefined) {
+      alert('Please enter your email')
+      return
+    }
+    if (!email.includes('@')) {
+      alert('Please enter a valid email')
+      return
+    } else {
+      setConfirmation(false)
+    }
   }
 
   return (
@@ -98,13 +98,18 @@ export const Reservations = () => {
       <div className='reservation-items-container'>
         <label htmlFor='service'>Service: </label>
         <select id='service' name='service' onChange={serviceChange}>
-        <option value='value'></option>
+          <option value='value'></option>
           {servicesArray.map((service) => (
             <option key={service.name}>{service.name}</option>
           ))}
         </select>
         <label htmlFor='barber'>Barber: </label>
-        <select defaultValue = " " onChange={barberChange} id='barber' name='barber'>
+        <select
+          defaultValue=' '
+          onChange={barberChange}
+          id='barber'
+          name='barber'
+        >
           <option value='value'></option>
           {staffArray.map((staff) => (
             <option key={staff.name}>{staff.name}</option>
@@ -129,12 +134,14 @@ export const Reservations = () => {
         />
         <label htmlFor='times'>Time: </label>
         <select onChange={timeChange} id='times' name='times'>
-        <option value='value'></option>
+          <option value='value'></option>
           {times.map((time) => (
             <option key={time}>{time}</option>
           ))}
         </select>
-        <label htmlFor='name'>Name: </label>
+        <label htmlFor='name' required>
+          Name:{' '}
+        </label>
         <input onChange={nameChange} type='text' id='name' name='name' />
         <label htmlFor='email'>Email: </label>
         <input onChange={emailChange} type='email' id='email' name='email' />
@@ -152,9 +159,9 @@ export const Reservations = () => {
           <p>
             You're all set for your {service} with {barber} on{' '}
             {months[selectedDay.month] + ' ' + selectedDay.day} at {apptTime},{' '}
-            {name}. A reminder email has been sent to {email}. If you need to
-            make any changes or cancel the appointment, give us a call at
-            619-867-5309.{' '}
+            {customerName}. A reminder email has been sent to {email}. If you
+            need to make any changes or cancel the appointment, give us a call
+            at 619-867-5309.{' '}
           </p>
           <button onClick={closeWindow}>Close</button>
         </div>
