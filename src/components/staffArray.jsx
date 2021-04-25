@@ -9,7 +9,7 @@ export const staffArray = [
       name: 'Chris',
       picture: chris,
       about:
-        "Born and raised in Miami, FL, Chris began cutting in 2011 at the upscale Brooklyn based barbershop, Persons of Interest. In 2013 he moved to San Diego with his wife and three children and began building a loyal clientele on the west coast. When he's not at the shop, Chris enjoys playing guitar, going to shows and weekend camping trips with his family and friends.",
+         "Chris was born and raised in Miami Florida and began cutting in 2011 at the upscale Brooklyn based barbershop, Persons of Interest. In 2013 he moved to San Diego with his wife and three children and began building a loyal clientele on the west coast. When he's not at the shop, Chris enjoys playing guitar, going to shows and weekend camping trips with his family and friends.",
         schedule: "M T W Sat Sun"
     },
     {
